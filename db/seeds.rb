@@ -6,6 +6,10 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
+##### Users #####
+User.create name: 'Jhon', kind: :administrator, email: 'jhon@teste.com', password: 123456
+User.create name: 'Editor', kind: :editor, email: 'editor@teste.com', password: 123456
+
 ##### Buildings #####
 
 building_bloco_1 = Building.create name: 'Bloco 1'
