@@ -25,6 +25,7 @@ ActiveRecord::Schema.define(version: 2020_05_12_005622) do
     t.string "name"
     t.string "email"
     t.string "ramal"
+    t.text "additional_contact_data"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
