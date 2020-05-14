@@ -8,6 +8,22 @@ RailsAdmin.config do |config|
 
   config.navigation_static_label = "Links Úteis"
 
+  config.model Employee do
+    weight -1
+  end
+
+  config.model JobPosition do
+    parent Employee
+  end
+
+  config.model RoomType do
+    parent Room
+  end
+
+  config.model Room do
+    parent Building
+  end
+
   ### Popular gems integration
 
   ## == Devise ==
