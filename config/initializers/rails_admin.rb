@@ -2,6 +2,12 @@ RailsAdmin.config do |config|
 
   config.main_app_name = ["Catálogo IPRJ", ""]
 
+  config.navigation_static_links = {
+    'IPRJ' => 'http://www.iprj.uerj.br/'
+  }
+
+  config.navigation_static_label = "Links Úteis"
+
   ### Popular gems integration
 
   ## == Devise ==
