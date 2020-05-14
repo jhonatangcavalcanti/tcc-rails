@@ -1,5 +1,7 @@
 RailsAdmin.config do |config|
 
+  config.main_app_name = ["Catálogo IPRJ", ""]
+
   ### Popular gems integration
 
   ## == Devise ==
