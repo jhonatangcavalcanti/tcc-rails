@@ -27,6 +27,10 @@ Rails.application.configure do
     config.cache_store = :null_store
   end
 
+  config.i18n.enforce_available_locales = false
+  config.i18n.available_locales = ["pt-BR"]
+  config.i18n.default_locale = :'pt-BR'
+
   # Store uploaded files on the local file system (see config/storage.yml for options)
   config.active_storage.service = :local
 
