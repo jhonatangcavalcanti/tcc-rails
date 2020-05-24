@@ -52,11 +52,6 @@ ActiveRecord::Schema.define(version: 2020_05_24_140047) do
     t.bigint "job_position_id", null: false
   end
 
-  create_table "employees_rooms", id: false, force: :cascade do |t|
-    t.bigint "employee_id", null: false
-    t.bigint "room_id", null: false
-  end
-
   create_table "job_positions", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
