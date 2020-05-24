@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_24_135838) do
+ActiveRecord::Schema.define(version: 2020_05_24_140047) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -19,6 +19,17 @@ ActiveRecord::Schema.define(version: 2020_05_24_135838) do
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "allocations", force: :cascade do |t|
+    t.bigint "employee_id"
+    t.bigint "room_id"
+    t.bigint "allocation_role_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["allocation_role_id"], name: "index_allocations_on_allocation_role_id"
+    t.index ["employee_id"], name: "index_allocations_on_employee_id"
+    t.index ["room_id"], name: "index_allocations_on_room_id"
   end
 
   create_table "buildings", force: :cascade do |t|
@@ -83,6 +94,9 @@ ActiveRecord::Schema.define(version: 2020_05_24_135838) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "allocations", "allocation_roles"
+  add_foreign_key "allocations", "employees"
+  add_foreign_key "allocations", "rooms"
   add_foreign_key "rooms", "buildings"
   add_foreign_key "rooms", "room_types"
 end

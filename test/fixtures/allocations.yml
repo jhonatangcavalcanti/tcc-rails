@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  employee: one
+  room: one
+  allocation_role: one
+
+two:
+  employee: two
+  room: two
+  allocation_role: two
