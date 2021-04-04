@@ -19,12 +19,15 @@ building_bloco_2 = Building.create name: 'Bloco 2'
 
 room_type_laboratorio = RoomType.create name: 'Laboratório'
 room_type_secretaria = RoomType.create name: 'Secretaria'
+room_type_departamento = RoomType.create name: 'Departamento'
 
 ##### Rooms #####
 
 room_direcao = Room.create name: 'Secretaria da direção', number: '101', room_type: room_type_secretaria, building: building_bloco_1
 room_lti = Room.create name: 'LTI', number: '301', room_type: room_type_laboratorio, building: building_bloco_1
 room_lab_teste = Room.create name: 'Lab de teste', number: '202', room_type: room_type_laboratorio, building: building_bloco_2
+room_dptmc_223 = Room.create name: 'DMC', number: '223', room_type: room_type_departamento, building: building_bloco_1
+room_dptmc_225 = Room.create name: 'DMC', number: '225', room_type: room_type_departamento, building: building_bloco_1
 
 ##### Job Position #####
 
@@ -32,8 +35,13 @@ job_position_tecnico = JobPosition.create name: 'Técnico'
 job_position_professor = JobPosition.create name: 'Professor'
 job_position_diretor = JobPosition.create name: 'Diretor'
 
-##### Employees #####
+###### Alocation Role ######
 
-Employee.create name: 'Employee Test', email: 'test@test.com', ramal: '1010', job_position: [job_position_tecnico], room: [room_lab_teste]
-Employee.create name: 'John Doe', email: 'john@test.com', ramal: '2020', job_position: [job_position_professor], room: [room_lti]
-Employee.create name: 'Jhonatan', email: 'jhon@test.com', ramal: '3030', job_position: [job_position_diretor, job_position_professor], room: [room_direcao]
+AllocationRole.create name: 'Dono'
+AllocationRole.create name: 'Assistente'
+
+###### Employees #####
+
+Employee.create name: 'Employee Test', email: 'test@test.com', ramal: '1010' #, job_position: [job_position_tecnico]
+Employee.create name: 'John Doe', email: 'john@test.com', ramal: '2020' #, job_position: [job_position_professor]
+Employee.create name: 'Jhonatan', email: 'jhon@test.com', ramal: '3030' #, job_position: [job_position_diretor, job_position_professor]
