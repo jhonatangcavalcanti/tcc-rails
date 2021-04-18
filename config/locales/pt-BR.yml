@@ -35,6 +35,9 @@ pt-BR:
       allocation_role:
         one: "Função"
         other: "Funções"
+      allocation:
+        one: "Alocação"
+        other: "Alocações"
     attributes:
       employee:
         name: "Nome"
@@ -59,6 +62,11 @@ pt-BR:
       allocation_role:
         name: "Nome"
         allocations: "Alocações"
+      allocation:
+        name: "Nome"
+        employee: "Servidor"
+        room: "Sala"
+        allocation_role: "Função"
     errors:
       messages:
         record_invalid: 'A validação falhou: %{errors}'
