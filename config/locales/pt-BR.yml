@@ -43,7 +43,8 @@ pt-BR:
         name: "Nome"
         additional_contact_data: "Informações adicionais"
         job_position: "Cargo"
-        room: "Sala"
+        rooms: "Salas"
+        allocations: "Alocações"
       building:
         name: "Nome"
         rooms: "Salas"
@@ -58,7 +59,8 @@ pt-BR:
         number: "Número"
         building: "Bloco"
         room_type: "Tipo de sala"
-        employee: "Servidor"
+        employees: "Servidores"
+        allocations: "Alocações"
       allocation_role:
         name: "Nome"
         allocations: "Alocações"
