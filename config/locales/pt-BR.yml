@@ -32,6 +32,9 @@ pt-BR:
       ability:
         one: Habilidade
         other: Habilidades
+      allocation_role:
+        one: "Função"
+        other: "Funções"
     attributes:
       employee:
         name: "Nome"
@@ -53,6 +56,9 @@ pt-BR:
         building: "Bloco"
         room_type: "Tipo de sala"
         employee: "Servidor"
+      allocation_role:
+        name: "Nome"
+        allocations: "Alocações"
     errors:
       messages:
         record_invalid: 'A validação falhou: %{errors}'
