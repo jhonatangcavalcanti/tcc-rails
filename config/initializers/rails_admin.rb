@@ -24,6 +24,10 @@ RailsAdmin.config do |config|
     parent Building
   end
 
+  config.model AllocationRole do
+    parent Allocation
+  end
+
   ### Popular gems integration
 
   ## == Devise ==
