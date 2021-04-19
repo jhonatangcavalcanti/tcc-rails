@@ -32,13 +32,18 @@ room_dptmc_225 = Room.create name: 'DMC', number: '225', room_type: room_type_de
 ##### Job Position #####
 
 job_position_tecnico = JobPosition.create name: 'Técnico'
+job_position_tecnico_administrativo = JobPosition.create name: 'Técnico-administrativo'
 job_position_professor = JobPosition.create name: 'Professor'
-job_position_diretor = JobPosition.create name: 'Diretor'
+job_position_bibliotecario = JobPosition.create name: 'Bibliotecário'
+# job_position_diretor = JobPosition.create name: 'Diretor'
 
 ###### Alocation Role ######
 
-AllocationRole.create name: 'Dono'
-AllocationRole.create name: 'Assistente'
+AllocationRole.create name: 'Diretor'
+AllocationRole.create name: 'Coordenador'
+AllocationRole.create name: 'Chefe'
+AllocationRole.create name: 'Gerente'
+AllocationRole.create name: 'Integrante da Equipe (Membro)'
 
 ###### Employees #####
 
