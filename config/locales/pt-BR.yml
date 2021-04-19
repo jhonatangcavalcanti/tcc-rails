@@ -38,6 +38,9 @@ pt-BR:
       allocation:
         one: "Alocação"
         other: "Alocações"
+      department:
+        one: "Setor"
+        other: "Setores"
     attributes:
       employee:
         name: "Nome"
@@ -61,6 +64,7 @@ pt-BR:
         room_type: "Tipo de sala"
         employees: "Servidores"
         allocations: "Alocações"
+        department: "Setor"
       allocation_role:
         name: "Nome"
         allocations: "Alocações"
@@ -69,6 +73,9 @@ pt-BR:
         employee: "Servidor"
         room: "Sala"
         allocation_role: "Função"
+      department:
+        name: "Nome"
+        rooms: "Salas"
     errors:
       messages:
         record_invalid: 'A validação falhou: %{errors}'

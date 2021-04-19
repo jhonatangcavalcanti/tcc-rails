@@ -16,6 +16,10 @@ RailsAdmin.config do |config|
     parent Employee
   end
 
+  config.model Department do
+    parent Building
+  end
+
   config.model RoomType do
     parent Room
   end

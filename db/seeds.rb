@@ -21,13 +21,20 @@ room_type_laboratorio = RoomType.create name: 'Laboratório'
 room_type_secretaria = RoomType.create name: 'Secretaria'
 room_type_departamento = RoomType.create name: 'Departamento'
 
+##### Departments #####
+
+department_direcao = Department.create name: 'Secretaria da direção'
+department_lti = Department.create name: 'LTI'
+department_teste = Department.create name: 'Lab de teste'
+department_dmc = Department.create name: 'DMC'
+
 ##### Rooms #####
 
-room_direcao = Room.create name: 'Secretaria da direção', number: '101', room_type: room_type_secretaria, building: building_bloco_1
-room_lti = Room.create name: 'LTI', number: '301', room_type: room_type_laboratorio, building: building_bloco_1
-room_lab_teste = Room.create name: 'Lab de teste', number: '202', room_type: room_type_laboratorio, building: building_bloco_2
-room_dptmc_223 = Room.create name: 'DMC', number: '223', room_type: room_type_departamento, building: building_bloco_1
-room_dptmc_225 = Room.create name: 'DMC', number: '225', room_type: room_type_departamento, building: building_bloco_1
+room_direcao = Room.create name: 'Secretaria da direção', number: '101', room_type: room_type_secretaria, building: building_bloco_1, department: department_direcao
+room_lti = Room.create name: 'LTI', number: '301', room_type: room_type_laboratorio, building: building_bloco_1, department: department_lti
+room_lab_teste = Room.create name: 'Lab de teste', number: '202', room_type: room_type_laboratorio, building: building_bloco_2, department: department_teste
+room_dptmc_223 = Room.create name: 'DMC', number: '223', room_type: room_type_departamento, building: building_bloco_1, department: department_dmc
+room_dptmc_225 = Room.create name: 'DMC', number: '225', room_type: room_type_departamento, building: building_bloco_1, department: department_dmc
 
 ##### Job Position #####
 
