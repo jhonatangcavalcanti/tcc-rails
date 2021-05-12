@@ -1,5 +1,5 @@
 class Allocation < ApplicationRecord
-  belongs_to :employee
+  belongs_to :employee, inverse_of: :allocations
   belongs_to :room
   belongs_to :allocation_role
 
