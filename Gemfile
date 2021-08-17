@@ -65,3 +65,7 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'rails_admin'
 gem 'devise'
 gem 'cancancan', '~> 1.15.0'
+# gems for public front end views
+gem 'jquery-rails'
+gem 'materialize-sass'
+gem 'material_icons'
