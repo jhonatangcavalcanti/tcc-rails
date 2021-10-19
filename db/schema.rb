@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_05_24_140047) do
+ActiveRecord::Schema.define(version: 2021_10_19_190026) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -53,15 +53,19 @@ ActiveRecord::Schema.define(version: 2020_05_24_140047) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "employees_job_positions", id: false, force: :cascade do |t|
-    t.bigint "employee_id", null: false
-    t.bigint "job_position_id", null: false
-  end
-
   create_table "job_positions", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "positions", force: :cascade do |t|
+    t.bigint "employee_id"
+    t.bigint "job_position_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["employee_id"], name: "index_positions_on_employee_id"
+    t.index ["job_position_id"], name: "index_positions_on_job_position_id"
   end
 
   create_table "room_types", force: :cascade do |t|
@@ -100,6 +104,8 @@ ActiveRecord::Schema.define(version: 2020_05_24_140047) do
   add_foreign_key "allocations", "allocation_roles"
   add_foreign_key "allocations", "employees"
   add_foreign_key "allocations", "rooms"
+  add_foreign_key "positions", "employees"
+  add_foreign_key "positions", "job_positions"
   add_foreign_key "rooms", "buildings"
   add_foreign_key "rooms", "departments"
   add_foreign_key "rooms", "room_types"

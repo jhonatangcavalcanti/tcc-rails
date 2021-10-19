@@ -1,6 +1,7 @@
 class Employee < ApplicationRecord
-  has_and_belongs_to_many :job_position
-
   has_many :allocations, inverse_of: :employee
   has_many :rooms, through: :allocations
+
+  has_many :positions
+  has_many :job_positions, through: :positions
 end
