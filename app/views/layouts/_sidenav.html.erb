@@ -1,0 +1,45 @@
+<ul id="slide-out" class="sidenav">
+  <div class="navbar-fixed valign-wrapper">
+    <div class="sidenav-close sidenav-close-icon-wrapper">
+      <i class="material-icons menu-open-icon">menu</i>
+    </div>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="dynamic-items-section">
+    <%= render '/components/collapsible_collection', title: "Áreas de Desenvolvimento", items: @rooms, item_template: 'development_area_collapsible_body', header_type: 'no-icon' %>
+    <%
+=begin%>
+ <%= render '/components/collapsible_collection', title: "Competências", items: @development_areas, item_template: 'competency_collapsible_body', header_type: 'no-icon' %>
+<%
+=end%>
+    <%
+=begin%>
+ <%= render '/components/collapsible_collection', title: "Itens de Progressão", items: @development_areas, item_template: 'progression_collapsible_body', header_type: 'no-icon' %>
+<%
+=end%>
+  </div>
+
+  <div class="divider"></div>
+
+  <div class="dynamic-items-section">
+    <%
+=begin%>
+ <%= render '/components/collapsible_collection', title: "Duração", items: @commomDurationIntervals, item_template: 'duration_collapsible_body', header_type: 'with-icon', icon_name: 'timer' %>
+    <%= render '/components/collapsible_collection', title: "Participantes", items: @commomQuantityParticipantsIntervals, item_template: 'participants_collapsible_body', header_type: 'with-icon', icon_name: 'face' %>
+    <%= render '/components/collapsible_collection', title: "Clima", items: @commomClimates, item_template: 'climate_collapsible_body', header_type: 'with-icon', icon_name: 'filter_drama' %>
+    <%= render '/components/collapsible_collection', title: "Local", items: @commomEnvironments, item_template: 'environment_collapsible_body', header_type: 'with-icon', icon_name: 'filter_hdr_outlined' %>
+    <%= render '/components/collapsible_collection', title: "Interação", items: @commomInteractions, item_template: 'interaction_collapsible_body', header_type: 'with-icon', icon_name: 'people' %>
+    <%= render '/components/collapsible_collection', title: "Intensidade", items: @commomIntensities, item_template: 'intensity_collapsible_body', header_type: 'with-icon', icon_name: 'whatshot' %>
+    <%= render '/components/collapsible_collection', title: "Turno", items: @commomTimeOfDays, item_template: 'time_of_day_collapsible_body', header_type: 'with-icon', icon_name: 'brightness_6' %>
+<%
+=end%>
+  </div>
+
+  <div class="divider"></div>
+
+  <li class="dynamic-items-section">
+    <a href="/about" class="">Sobre</a>
+  </li>
+</ul>

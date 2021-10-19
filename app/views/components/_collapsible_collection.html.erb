@@ -1,0 +1,12 @@
+<ul class="collapsible expandable collapsible-collection">
+  <li>
+    <%= render '/components/collapsible_header', title: title, header_type: header_type, icon_name: header_type == 'with-icon' ? icon_name : '' %>
+    <% items.each do |item| %>
+        <div class="competency-collection-item__label game-circular-label black-text" %> >
+          <%= "#{item.name}" %>
+        </div>
+        <i class="material-icons development-area-collection-item__arrow-icon">keyboard_arrow_right</i>
+    <% end %>
+
+  </li>
+</ul>
