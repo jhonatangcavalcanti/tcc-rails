@@ -31,10 +31,10 @@ department_dmc = Department.create name: 'DMC'
 ##### Rooms #####
 
 room_direcao = Room.create name: 'Secretaria da direção', number: '101', room_type: room_type_secretaria, building: building_bloco_1, department: department_direcao
-room_lti = Room.create name: 'LTI', number: '301', room_type: room_type_laboratorio, building: building_bloco_1, department: department_lti
+room_lti = Room.create name: 'Lab LTI', number: '301', room_type: room_type_laboratorio, building: building_bloco_1, department: department_lti
 room_lab_teste = Room.create name: 'Lab de teste', number: '202', room_type: room_type_laboratorio, building: building_bloco_2, department: department_teste
-room_dptmc_223 = Room.create name: 'DMC', number: '223', room_type: room_type_departamento, building: building_bloco_1, department: department_dmc
-room_dptmc_225 = Room.create name: 'DMC', number: '225', room_type: room_type_departamento, building: building_bloco_1, department: department_dmc
+room_dptmc_223 = Room.create name: 'Dpto DMC', number: '223', room_type: room_type_departamento, building: building_bloco_1, department: department_dmc
+room_dptmc_225 = Room.create name: 'Dpto DMC', number: '225', room_type: room_type_departamento, building: building_bloco_1, department: department_dmc
 
 ##### Job Position #####
 
@@ -47,7 +47,9 @@ job_position_bibliotecario = JobPosition.create name: 'Bibliotecário'
 ###### Alocation Role ######
 
 AllocationRole.create name: 'Diretor'
+AllocationRole.create name: 'Vice Diretor'
 AllocationRole.create name: 'Coordenador'
+AllocationRole.create name: 'Secretario'
 AllocationRole.create name: 'Chefe'
 AllocationRole.create name: 'Gerente'
 AllocationRole.create name: 'Integrante da Equipe (Membro)'
