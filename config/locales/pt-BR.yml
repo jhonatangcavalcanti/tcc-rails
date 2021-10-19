@@ -17,6 +17,9 @@ pt-BR:
       building:
         one: "Bloco"
         other: "Blocos"
+      position:
+        one: "Cargo do Servidor"
+        other: "Cargos do Servidores"
       job_position:
         one: "Cargo"
         other: "Cargos"
@@ -45,15 +48,20 @@ pt-BR:
       employee:
         name: "Nome"
         additional_contact_data: "Informações adicionais"
-        job_position: "Cargo"
+        job_positions: "Cargos"
         rooms: "Salas"
         allocations: "Alocações"
+        positions: "Cargos dos Servidores"
       building:
         name: "Nome"
         rooms: "Salas"
+      position:
+        employee: "Servidor"
+        job_position: "Cargo"
       job_position:
         name: "Nome"
-        employee: "Servidor"
+        employees: "Servidores"
+        positions: "Cargos dos Servidores"
       room_type:
         name: "Nome"
         rooms: "Salas"
