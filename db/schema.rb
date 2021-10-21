@@ -38,10 +38,18 @@ ActiveRecord::Schema.define(version: 2021_10_19_190026) do
     t.datetime "updated_at", null: false
   end
 
-  create_table "departments", force: :cascade do |t|
+  create_table "department_types", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "departments", force: :cascade do |t|
+    t.string "name"
+    t.bigint "department_type_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["department_type_id"], name: "index_departments_on_department_type_id"
   end
 
   create_table "employees", force: :cascade do |t|
@@ -68,23 +76,15 @@ ActiveRecord::Schema.define(version: 2021_10_19_190026) do
     t.index ["job_position_id"], name: "index_positions_on_job_position_id"
   end
 
-  create_table "room_types", force: :cascade do |t|
-    t.string "name"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "rooms", force: :cascade do |t|
     t.string "name"
     t.string "number"
     t.bigint "building_id"
-    t.bigint "room_type_id"
     t.bigint "department_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["building_id"], name: "index_rooms_on_building_id"
     t.index ["department_id"], name: "index_rooms_on_department_id"
-    t.index ["room_type_id"], name: "index_rooms_on_room_type_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -104,9 +104,9 @@ ActiveRecord::Schema.define(version: 2021_10_19_190026) do
   add_foreign_key "allocations", "allocation_roles"
   add_foreign_key "allocations", "employees"
   add_foreign_key "allocations", "rooms"
+  add_foreign_key "departments", "department_types"
   add_foreign_key "positions", "employees"
   add_foreign_key "positions", "job_positions"
   add_foreign_key "rooms", "buildings"
   add_foreign_key "rooms", "departments"
-  add_foreign_key "rooms", "room_types"
 end

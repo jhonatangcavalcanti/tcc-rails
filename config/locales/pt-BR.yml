@@ -23,9 +23,9 @@ pt-BR:
       job_position:
         one: "Cargo"
         other: "Cargos"
-      room_type:
-        one: "Tipo de sala"
-        other: "Tipos de sala"
+      department_type:
+        one: "Tipo de setor"
+        other: "Tipos de setores"
       room:
         one: "Sala"
         other: "Salas"
@@ -62,14 +62,13 @@ pt-BR:
         name: "Nome"
         employees: "Servidores"
         positions: "Cargos dos Servidores"
-      room_type:
+      department_type:
         name: "Nome"
-        rooms: "Salas"
+        departments: "Setores"
       room:
         name: "Nome"
         number: "Número"
         building: "Bloco"
-        room_type: "Tipo de sala"
         employees: "Servidores"
         allocations: "Alocações"
         department: "Setor"
@@ -84,6 +83,7 @@ pt-BR:
       department:
         name: "Nome"
         rooms: "Salas"
+        department_type: "Tipo de setor"
     errors:
       messages:
         record_invalid: 'A validação falhou: %{errors}'

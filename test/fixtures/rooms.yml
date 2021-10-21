@@ -3,9 +3,7 @@
 one:
   name: MyString
   building: one
-  room_type: one
 
 two:
   name: MyString
   building: two
-  room_type: two

@@ -2,6 +2,8 @@
 
 one:
   name: MyString
+  department_type: one
 
 two:
   name: MyString
+  department_type: two
