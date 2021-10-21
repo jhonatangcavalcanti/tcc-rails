@@ -18,6 +18,7 @@ RailsAdmin.config do |config|
 
   config.model Department do
     parent Building
+    weight -1
   end
 
   config.model RoomType do
