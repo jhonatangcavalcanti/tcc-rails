@@ -17,46 +17,55 @@ building_bloco_2 = Building.create name: 'Bloco 2'
 
 ##### Department Types  #####
 
-department_type_laboratorio = DepartmentType.create name: 'Laboratório'
-department_type_secretaria = DepartmentType.create name: 'Secretaria'
-department_type_departamento = DepartmentType.create name: 'Departamento'
 department_type_direcao = DepartmentType.create name: 'Direção'
+department_type_coordenacao_funcional = DepartmentType.create name: 'Coordenação Funcional'
+department_type_incubadora = DepartmentType.create name: 'Incubadora'
+department_type_coordenacao_ensino = DepartmentType.create name: 'Coordenação Ensino'
+department_type_biblioteca = DepartmentType.create name: 'Biblioteca'
+department_type_nucleo_extensao = DepartmentType.create name: 'Nucleo de Extensão'
+department_type_departamento = DepartmentType.create name: 'Departamento'
+department_type_laboratorio = DepartmentType.create name: 'Laboratório'
 
 ##### Departments #####
 
 department_direcao = Department.create name: 'Secretaria da direção', department_type: department_type_direcao
-department_lti = Department.create name: 'LTI', department_type: department_type_laboratorio
-department_teste = Department.create name: 'Lab de teste', department_type: department_type_laboratorio
-department_dmc = Department.create name: 'DMC', department_type: department_type_laboratorio
+department_lti = Department.create name: 'LTI - Laboratório de tecnologia da Informação', department_type: department_type_laboratorio
 
 ##### Rooms #####
 
-room_direcao = Room.create number: '101', building: building_bloco_1, department: department_direcao
-room_lti = Room.create number: '301', building: building_bloco_1, department: department_lti
-room_lab_teste = Room.create number: '202', building: building_bloco_2, department: department_teste
-room_dptmc_223 = Room.create number: '223', building: building_bloco_1, department: department_dmc
-room_dptmc_225 = Room.create number: '225', building: building_bloco_1, department: department_dmc
+room_direcao = Room.create number: '313', building: building_bloco_1, department: department_direcao
+room_lti = Room.create number: '112', building: building_bloco_1, department: department_lti
 
 ##### Job Position #####
 
-job_position_tecnico = JobPosition.create name: 'Técnico'
-job_position_tecnico_administrativo = JobPosition.create name: 'Técnico-administrativo'
+# job_position_tecnico = JobPosition.create name: 'Técnico'
+# job_position_tecnico_administrativo = JobPosition.create name: 'Técnico-administrativo'
+job_position_analista_sistemas = JobPosition.create name: 'Analista de Sistemas'
 job_position_professor = JobPosition.create name: 'Professor'
-job_position_bibliotecario = JobPosition.create name: 'Bibliotecário'
-# job_position_diretor = JobPosition.create name: 'Diretor'
+# job_position_bibliotecario = JobPosition.create name: 'Bibliotecário'
 
 ###### Alocation Role ######
 
-AllocationRole.create name: 'Diretor'
-AllocationRole.create name: 'Vice Diretor'
-AllocationRole.create name: 'Coordenador'
-AllocationRole.create name: 'Secretario'
-AllocationRole.create name: 'Chefe'
-AllocationRole.create name: 'Gerente'
-AllocationRole.create name: 'Integrante da Equipe (Membro)'
+alocation_role_diretor = AllocationRole.create name: 'Diretor'
+# AllocationRole.create name: 'Vice Diretor'
+# AllocationRole.create name: 'Coordenador'
+# AllocationRole.create name: 'Secretario'
+# AllocationRole.create name: 'Chefe'
+# AllocationRole.create name: 'Gerente'
+alocation_membro = AllocationRole.create name: 'Integrante da Equipe (Membro)'
+
 
 ###### Employees #####
 
-Employee.create name: 'Employee Test', email: 'test@test.com', ramal: '1010' #, job_position: [job_position_tecnico]
-Employee.create name: 'John Doe', email: 'john@test.com', ramal: '2020' #, job_position: [job_position_professor]
-Employee.create name: 'Jhonatan', email: 'jhon@test.com', ramal: '3030' #, job_position: [job_position_diretor, job_position_professor]
+ricardo = Employee.create name: 'Ricardo Carvalho de Barros', email: 'ricardob@iprj.uerj.br', ramal: '3131', job_positions: [job_position_professor]
+francisco = Employee.create name: 'Francisco Duarte Moura Neto', email: 'fmoura@iprj.uerj.br', ramal: '1121', job_positions: [job_position_professor]
+ursula = Employee.create name: 'Ursula Andrea Barbara Verdugo Rohrer', email: 'ursula@iprj.uerj.br', ramal: '1121', job_positions: [job_position_professor]
+edson = Employee.create name: 'Edson Mello Lucas', email: 'emlucas@iprj.uerj.br', ramal: '1121', job_positions: [job_position_analista_sistemas]
+
+###### Alocations #######
+
+Allocation.create employee: ricardo, room: room_direcao, allocation_role: alocation_role_diretor
+
+Allocation.create employee: francisco, room: room_lti, allocation_role: alocation_membro
+Allocation.create employee: ursula, room: room_lti, allocation_role: alocation_membro
+Allocation.create employee: edson, room: room_lti, allocation_role: alocation_membro
