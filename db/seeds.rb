@@ -31,11 +31,11 @@ department_dmc = Department.create name: 'DMC', department_type: department_type
 
 ##### Rooms #####
 
-room_direcao = Room.create name: 'Secretaria da direção', number: '101', building: building_bloco_1, department: department_direcao
-room_lti = Room.create name: 'Lab LTI', number: '301', building: building_bloco_1, department: department_lti
-room_lab_teste = Room.create name: 'Lab de teste', number: '202', building: building_bloco_2, department: department_teste
-room_dptmc_223 = Room.create name: 'Dpto DMC', number: '223', building: building_bloco_1, department: department_dmc
-room_dptmc_225 = Room.create name: 'Dpto DMC', number: '225', building: building_bloco_1, department: department_dmc
+room_direcao = Room.create number: '101', building: building_bloco_1, department: department_direcao
+room_lti = Room.create number: '301', building: building_bloco_1, department: department_lti
+room_lab_teste = Room.create number: '202', building: building_bloco_2, department: department_teste
+room_dptmc_223 = Room.create number: '223', building: building_bloco_1, department: department_dmc
+room_dptmc_225 = Room.create number: '225', building: building_bloco_1, department: department_dmc
 
 ##### Job Position #####
 

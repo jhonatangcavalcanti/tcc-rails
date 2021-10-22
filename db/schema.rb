@@ -77,7 +77,6 @@ ActiveRecord::Schema.define(version: 2021_10_19_190026) do
   end
 
   create_table "rooms", force: :cascade do |t|
-    t.string "name"
     t.string "number"
     t.bigint "building_id"
     t.bigint "department_id"
