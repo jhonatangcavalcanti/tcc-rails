@@ -30,11 +30,14 @@ department_type_laboratorio = DepartmentType.create name: 'Laboratório'
 
 department_direcao = Department.create name: 'Secretaria da direção', department_type: department_type_direcao
 department_lti = Department.create name: 'LTI - Laboratório de tecnologia da Informação', department_type: department_type_laboratorio
+department_dmc = Department.create name: 'DMC - Departamento de Modelagem Computacional', department_type: department_type_departamento
 
 ##### Rooms (Salas) #####
 
-room_direcao = Room.create number: '313', building: building_bloco_1, department: department_direcao
-room_lti = Room.create number: '112', building: building_bloco_1, department: department_lti
+room_direcao_313 = Room.create number: '313', building: building_bloco_1, department: department_direcao
+room_lti_112 = Room.create number: '112', building: building_bloco_1, department: department_lti
+room_dmc_225 = Room.create number: '225', building: building_bloco_1, department: department_dmc
+room_dmc_223 = Room.create number: '223', building: building_bloco_1, department: department_dmc
 
 ##### Job Position (Cargo) #####
 
@@ -63,10 +66,26 @@ francisco = Employee.create name: 'Francisco Duarte Moura Neto', email: 'fmoura@
 ursula = Employee.create name: 'Ursula Andrea Barbara Verdugo Rohrer', email: 'ursula@iprj.uerj.br', ramal: '1121', job_positions: [job_position_professor]
 edson = Employee.create name: 'Edson Mello Lucas', email: 'emlucas@iprj.uerj.br', ramal: '1121', job_positions: [job_position_tecnico]
 
+aanamen = Employee.create name: 'Anderson Amendoeira Namen', email: 'aanamen@iprj.uerj.br', ramal: '2107', job_positions: [job_position_professor]
+bernardo = Employee.create name: 'Bernardo Sotto-Maior Peralva', email: 'bernardo@iprj.uerj.br', ramal: '2231', job_positions: [job_position_professor]
+edirlei = Employee.create name: 'Edirlei Éverson Soares de Lima', email: 'edirlei@iprj.uerj.br', ramal: '2106', job_positions: [job_position_professor]
+domingues = Employee.create name: 'Guilherme de Melo Baptista Domingues', email: 'domingues@iprj.uerj.br', ramal: '2231', job_positions: [job_position_professor]
+lcustodio = Employee.create name: 'Lis Ingrid Roque Lopes Custodio', email: 'lcustodio@iprj.uerj.br', ramal: '2231', job_positions: [job_position_professor]
+silvia_dias = Employee.create name: 'Sílvia Cristina Dias Pinto', email: 'silvia.dias@iprj.uerj.br', ramal: '2108', job_positions: [job_position_professor]
+silvia_victer = Employee.create name: 'Silvia Mara da Costa Campos Victer', email: 'silviavicter@iprj.uerj.br', ramal: '2108', job_positions: [job_position_professor]
+
 ###### Alocations (Alocações) #######
 
-Allocation.create employee: ricardo, room: room_direcao, allocation_role: alocation_role_diretor
+Allocation.create employee: ricardo, room: room_direcao_313, allocation_role: alocation_role_diretor
 
-Allocation.create employee: francisco, room: room_lti, allocation_role: alocation_membro
-Allocation.create employee: ursula, room: room_lti, allocation_role: alocation_membro
-Allocation.create employee: edson, room: room_lti, allocation_role: alocation_membro
+Allocation.create employee: francisco, room: room_lti_112, allocation_role: alocation_membro
+Allocation.create employee: ursula, room: room_lti_112, allocation_role: alocation_membro
+Allocation.create employee: edson, room: room_lti_112, allocation_role: alocation_membro
+
+Allocation.create employee: aanamen, room: room_dmc_225, allocation_role: alocation_membro
+Allocation.create employee: bernardo, room: room_dmc_223, allocation_role: alocation_membro
+Allocation.create employee: edirlei, room: room_dmc_225, allocation_role: alocation_membro
+Allocation.create employee: domingues, room: room_dmc_223, allocation_role: alocation_membro
+Allocation.create employee: lcustodio, room: room_dmc_223, allocation_role: alocation_membro
+Allocation.create employee: silvia_dias, room: room_dmc_225, allocation_role: alocation_membro
+Allocation.create employee: silvia_victer, room: room_dmc_223, allocation_role: alocation_membro
