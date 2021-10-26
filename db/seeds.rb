@@ -6,16 +6,16 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 
-##### Users #####
+##### Users (usuários) #####
 User.create name: 'Jhon', kind: :admin, email: 'jhon@teste.com', password: 123456
 User.create name: 'Editor', kind: :editor, email: 'editor@teste.com', password: 123456
 
-##### Buildings #####
+##### Buildings (Blocos) #####
 
 building_bloco_1 = Building.create name: 'Bloco 1'
 building_bloco_2 = Building.create name: 'Bloco 2'
 
-##### Department Types  #####
+##### Department Types (Tipos de setores)  #####
 
 department_type_direcao = DepartmentType.create name: 'Direção'
 department_type_coordenacao_funcional = DepartmentType.create name: 'Coordenação Funcional'
@@ -26,17 +26,17 @@ department_type_nucleo_extensao = DepartmentType.create name: 'Nucleo de Extens�
 department_type_departamento = DepartmentType.create name: 'Departamento'
 department_type_laboratorio = DepartmentType.create name: 'Laboratório'
 
-##### Departments #####
+##### Departments (Setores) #####
 
 department_direcao = Department.create name: 'Secretaria da direção', department_type: department_type_direcao
 department_lti = Department.create name: 'LTI - Laboratório de tecnologia da Informação', department_type: department_type_laboratorio
 
-##### Rooms #####
+##### Rooms (Salas) #####
 
 room_direcao = Room.create number: '313', building: building_bloco_1, department: department_direcao
 room_lti = Room.create number: '112', building: building_bloco_1, department: department_lti
 
-##### Job Position #####
+##### Job Position (Cargo) #####
 
 # job_position_tecnico = JobPosition.create name: 'Técnico'
 # job_position_tecnico_administrativo = JobPosition.create name: 'Técnico-administrativo'
@@ -44,7 +44,7 @@ job_position_analista_sistemas = JobPosition.create name: 'Analista de Sistemas'
 job_position_professor = JobPosition.create name: 'Professor'
 # job_position_bibliotecario = JobPosition.create name: 'Bibliotecário'
 
-###### Alocation Role ######
+###### Alocation Role (Função) ######
 
 alocation_role_diretor = AllocationRole.create name: 'Diretor'
 # AllocationRole.create name: 'Vice Diretor'
@@ -55,14 +55,15 @@ alocation_role_diretor = AllocationRole.create name: 'Diretor'
 alocation_membro = AllocationRole.create name: 'Integrante da Equipe (Membro)'
 
 
-###### Employees #####
+###### Employees (Servidores) #####
 
 ricardo = Employee.create name: 'Ricardo Carvalho de Barros', email: 'ricardob@iprj.uerj.br', ramal: '3131', job_positions: [job_position_professor]
+
 francisco = Employee.create name: 'Francisco Duarte Moura Neto', email: 'fmoura@iprj.uerj.br', ramal: '1121', job_positions: [job_position_professor]
 ursula = Employee.create name: 'Ursula Andrea Barbara Verdugo Rohrer', email: 'ursula@iprj.uerj.br', ramal: '1121', job_positions: [job_position_professor]
 edson = Employee.create name: 'Edson Mello Lucas', email: 'emlucas@iprj.uerj.br', ramal: '1121', job_positions: [job_position_analista_sistemas]
 
-###### Alocations #######
+###### Alocations (Alocações) #######
 
 Allocation.create employee: ricardo, room: room_direcao, allocation_role: alocation_role_diretor
 
