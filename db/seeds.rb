@@ -38,9 +38,9 @@ room_lti = Room.create number: '112', building: building_bloco_1, department: de
 
 ##### Job Position (Cargo) #####
 
-# job_position_tecnico = JobPosition.create name: 'Técnico'
+job_position_tecnico = JobPosition.create name: 'Técnico'
 # job_position_tecnico_administrativo = JobPosition.create name: 'Técnico-administrativo'
-job_position_analista_sistemas = JobPosition.create name: 'Analista de Sistemas'
+# job_position_analista_sistemas = JobPosition.create name: 'Analista de Sistemas'
 job_position_professor = JobPosition.create name: 'Professor'
 # job_position_bibliotecario = JobPosition.create name: 'Bibliotecário'
 
@@ -61,7 +61,7 @@ ricardo = Employee.create name: 'Ricardo Carvalho de Barros', email: 'ricardob@i
 
 francisco = Employee.create name: 'Francisco Duarte Moura Neto', email: 'fmoura@iprj.uerj.br', ramal: '1121', job_positions: [job_position_professor]
 ursula = Employee.create name: 'Ursula Andrea Barbara Verdugo Rohrer', email: 'ursula@iprj.uerj.br', ramal: '1121', job_positions: [job_position_professor]
-edson = Employee.create name: 'Edson Mello Lucas', email: 'emlucas@iprj.uerj.br', ramal: '1121', job_positions: [job_position_analista_sistemas]
+edson = Employee.create name: 'Edson Mello Lucas', email: 'emlucas@iprj.uerj.br', ramal: '1121', job_positions: [job_position_tecnico]
 
 ###### Alocations (Alocações) #######
 
