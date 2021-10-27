@@ -28,7 +28,7 @@ department_type_laboratorio = DepartmentType.create name: 'Laboratório'
 
 ##### Departments (Setores) #####
 
-department_direcao = Department.create name: 'Secretaria da direção', department_type: department_type_direcao
+department_direcao = Department.create name: 'Direção', department_type: department_type_direcao
 
 department_lti = Department.create name: 'LTI - Laboratório de tecnologia da Informação', department_type: department_type_laboratorio
 department_labtran = Department.create name: 'LABTRAN - Laboratório de Modelagem MultiEscala e Transporte de Partículas ', department_type: department_type_laboratorio
@@ -60,9 +60,9 @@ job_position_professor = JobPosition.create name: 'Professor'
 ###### Alocation Role (Função) ######
 
 alocation_role_diretor = AllocationRole.create name: 'Diretor'
-# AllocationRole.create name: 'Vice Diretor'
+alocation_role_vice_diretor = AllocationRole.create name: 'Vice Diretor'
 # AllocationRole.create name: 'Coordenador'
-# AllocationRole.create name: 'Secretario'
+alocation_role_secretario = AllocationRole.create name: 'Secretario'
 # AllocationRole.create name: 'Chefe'
 # AllocationRole.create name: 'Gerente'
 alocation_membro = AllocationRole.create name: 'Integrante da Equipe (Membro)'
@@ -71,6 +71,9 @@ alocation_membro = AllocationRole.create name: 'Integrante da Equipe (Membro)'
 ###### Employees (Servidores) #####
 
 ricardob = Employee.create name: 'Ricardo Carvalho de Barros', email: 'ricardob@iprj.uerj.br', job_positions: [job_position_professor]
+helio = Employee.create name: 'Helio Pedro Amaral Souto', email: 'helio@iprj.uerj.br', job_positions: [job_position_professor]
+arthur = Employee.create name: 'Arthur Alencar Filarde de Freitas', email: 'arthur@iprj.uerj.br', job_positions: [job_position_tecnico]
+bmenezes = Employee.create name: 'Bárbara Valéria Menezes de Oliveira', email: 'bmenezes@iprj.uerj.br', job_positions: [job_position_tecnico]
 
 francisco = Employee.create name: 'Francisco Duarte Moura Neto', email: 'fmoura@iprj.uerj.br', job_positions: [job_position_professor]
 ursula = Employee.create name: 'Ursula Andrea Barbara Verdugo Rohrer', email: 'ursula@iprj.uerj.br', job_positions: [job_position_professor]
@@ -84,7 +87,6 @@ lcustodio = Employee.create name: 'Lis Ingrid Roque Lopes Custodio', email: 'lcu
 silvia_dias = Employee.create name: 'Sílvia Cristina Dias Pinto', email: 'silvia.dias@iprj.uerj.br', job_positions: [job_position_professor]
 silvia_victer = Employee.create name: 'Silvia Mara da Costa Campos Victer', email: 'silviavicter@iprj.uerj.br', job_positions: [job_position_professor]
 
-helio = Employee.create name: 'Helio Pedro Amaral Souto', email: 'helio@iprj.uerj.br', job_positions: [job_position_professor]
 dmilitao = Employee.create name: 'Damiano da Silva Militão', email: 'dmilitão@iprj.uerj.br', job_positions: [job_position_professor]
 gsouza = Employee.create name: 'Grazione de Souza Boy', email: 'gsouza@iprj.uerj.br', job_positions: [job_position_professor]
 halves = Employee.create name: 'Hermes Alves Filho', email: 'halves@iprj.uerj.br', job_positions: [job_position_professor]
@@ -95,6 +97,9 @@ ptarco = Employee.create name: 'Paulo de Tarço Honório Jr.', email: 'ptarco@ip
 ###### Alocations (Alocações) #######
 
 Allocation.create employee: ricardob, ramal: '3131', room: room_direcao_313, allocation_role: alocation_role_diretor
+Allocation.create employee: helio, ramal: '3131', room: room_direcao_313, allocation_role: alocation_role_vice_diretor
+Allocation.create employee: arthur, ramal: '3134', room: room_direcao_313, allocation_role: alocation_role_secretario
+Allocation.create employee: bmenezes, ramal: '3134', room: room_direcao_313, allocation_role: alocation_role_secretario
 
 Allocation.create employee: francisco, ramal: '1121', room: room_lti_112, allocation_role: alocation_membro
 Allocation.create employee: ursula, ramal: '1121', room: room_lti_112, allocation_role: alocation_membro
