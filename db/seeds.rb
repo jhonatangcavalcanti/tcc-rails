@@ -30,6 +30,8 @@ department_type_laboratorio = DepartmentType.create name: 'Laboratório'
 
 department_direcao = Department.create name: 'Direção', department_type: department_type_direcao
 
+department_coadm = Department.create name: 'COADM - Coordenadoria de Administração', department_type: department_type_coordenacao_funcional
+
 department_lti = Department.create name: 'LTI - Laboratório de tecnologia da Informação', department_type: department_type_laboratorio
 department_labtran = Department.create name: 'LABTRAN - Laboratório de Modelagem MultiEscala e Transporte de Partículas ', department_type: department_type_laboratorio
 
@@ -38,6 +40,8 @@ department_dmc = Department.create name: 'DMC - Departamento de Modelagem Comput
 ##### Rooms (Salas) #####
 
 room_direcao_313 = Room.create number: '313', building: building_bloco_1, department: department_direcao
+
+room_coadm_313 = Room.create number: '313', building: building_bloco_1, department: department_coadm
 
 room_lti_112 = Room.create number: '112', building: building_bloco_1, department: department_lti
 
@@ -61,7 +65,7 @@ job_position_professor = JobPosition.create name: 'Professor'
 
 alocation_role_diretor = AllocationRole.create name: 'Diretor'
 alocation_role_vice_diretor = AllocationRole.create name: 'Vice Diretor'
-# AllocationRole.create name: 'Coordenador'
+alocation_role_coordenador = AllocationRole.create name: 'Coordenador'
 alocation_role_secretario = AllocationRole.create name: 'Secretario'
 # AllocationRole.create name: 'Chefe'
 # AllocationRole.create name: 'Gerente'
@@ -74,6 +78,10 @@ ricardob = Employee.create name: 'Ricardo Carvalho de Barros', email: 'ricardob@
 helio = Employee.create name: 'Helio Pedro Amaral Souto', email: 'helio@iprj.uerj.br', job_positions: [job_position_professor]
 arthur = Employee.create name: 'Arthur Alencar Filarde de Freitas', email: 'arthur@iprj.uerj.br', job_positions: [job_position_tecnico]
 bmenezes = Employee.create name: 'Bárbara Valéria Menezes de Oliveira', email: 'bmenezes@iprj.uerj.br', job_positions: [job_position_tecnico]
+
+ferreira = Employee.create name: 'Marcello da Silva Ferreira', email: 'ferreira@iprj.uerj.br', job_positions: [job_position_tecnico]
+andrea = Employee.create name: 'Andréa Teixeira de Medeiros', email: 'andrea@iprj.uerj.br', job_positions: [job_position_tecnico]
+daiany = Employee.create name: 'Daiany da Silva Pereira Pinto', email: 'daiany@iprj.uerj.br', job_positions: [job_position_tecnico]
 
 francisco = Employee.create name: 'Francisco Duarte Moura Neto', email: 'fmoura@iprj.uerj.br', job_positions: [job_position_professor]
 ursula = Employee.create name: 'Ursula Andrea Barbara Verdugo Rohrer', email: 'ursula@iprj.uerj.br', job_positions: [job_position_professor]
@@ -100,6 +108,10 @@ Allocation.create employee: ricardob, ramal: '3131', room: room_direcao_313, all
 Allocation.create employee: helio, ramal: '3131', room: room_direcao_313, allocation_role: alocation_role_vice_diretor
 Allocation.create employee: arthur, ramal: '3134', room: room_direcao_313, allocation_role: alocation_role_secretario
 Allocation.create employee: bmenezes, ramal: '3134', room: room_direcao_313, allocation_role: alocation_role_secretario
+
+Allocation.create employee: ferreira, ramal: '3111', room: room_coadm_313, allocation_role: alocation_role_coordenador
+Allocation.create employee: andrea, ramal: '3113', room: room_coadm_313, allocation_role: alocation_role_secretario
+Allocation.create employee: daiany, ramal: '3112', room: room_coadm_313, allocation_role: alocation_role_secretario
 
 Allocation.create employee: francisco, ramal: '1121', room: room_lti_112, allocation_role: alocation_membro
 Allocation.create employee: ursula, ramal: '1121', room: room_lti_112, allocation_role: alocation_membro
