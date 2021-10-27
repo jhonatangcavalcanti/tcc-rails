@@ -70,49 +70,49 @@ alocation_membro = AllocationRole.create name: 'Integrante da Equipe (Membro)'
 
 ###### Employees (Servidores) #####
 
-ricardob = Employee.create name: 'Ricardo Carvalho de Barros', email: 'ricardob@iprj.uerj.br', ramal: '3131', job_positions: [job_position_professor]
+ricardob = Employee.create name: 'Ricardo Carvalho de Barros', email: 'ricardob@iprj.uerj.br', job_positions: [job_position_professor]
 
-francisco = Employee.create name: 'Francisco Duarte Moura Neto', email: 'fmoura@iprj.uerj.br', ramal: '1121', job_positions: [job_position_professor]
-ursula = Employee.create name: 'Ursula Andrea Barbara Verdugo Rohrer', email: 'ursula@iprj.uerj.br', ramal: '1121', job_positions: [job_position_professor]
-edson = Employee.create name: 'Edson Mello Lucas', email: 'emlucas@iprj.uerj.br', ramal: '1121', job_positions: [job_position_tecnico]
+francisco = Employee.create name: 'Francisco Duarte Moura Neto', email: 'fmoura@iprj.uerj.br', job_positions: [job_position_professor]
+ursula = Employee.create name: 'Ursula Andrea Barbara Verdugo Rohrer', email: 'ursula@iprj.uerj.br', job_positions: [job_position_professor]
+edson = Employee.create name: 'Edson Mello Lucas', email: 'emlucas@iprj.uerj.br', job_positions: [job_position_tecnico]
 
-aanamen = Employee.create name: 'Anderson Amendoeira Namen', email: 'aanamen@iprj.uerj.br', ramal: '2107', job_positions: [job_position_professor]
-bernardo = Employee.create name: 'Bernardo Sotto-Maior Peralva', email: 'bernardo@iprj.uerj.br', ramal: '2231', job_positions: [job_position_professor]
-edirlei = Employee.create name: 'Edirlei Éverson Soares de Lima', email: 'edirlei@iprj.uerj.br', ramal: '2106', job_positions: [job_position_professor]
-domingues = Employee.create name: 'Guilherme de Melo Baptista Domingues', email: 'domingues@iprj.uerj.br', ramal: '2231', job_positions: [job_position_professor]
-lcustodio = Employee.create name: 'Lis Ingrid Roque Lopes Custodio', email: 'lcustodio@iprj.uerj.br', ramal: '2231', job_positions: [job_position_professor]
-silvia_dias = Employee.create name: 'Sílvia Cristina Dias Pinto', email: 'silvia.dias@iprj.uerj.br', ramal: '2108', job_positions: [job_position_professor]
-silvia_victer = Employee.create name: 'Silvia Mara da Costa Campos Victer', email: 'silviavicter@iprj.uerj.br', ramal: '2108', job_positions: [job_position_professor]
+aanamen = Employee.create name: 'Anderson Amendoeira Namen', email: 'aanamen@iprj.uerj.br', job_positions: [job_position_professor]
+bernardo = Employee.create name: 'Bernardo Sotto-Maior Peralva', email: 'bernardo@iprj.uerj.br', job_positions: [job_position_professor]
+edirlei = Employee.create name: 'Edirlei Éverson Soares de Lima', email: 'edirlei@iprj.uerj.br', job_positions: [job_position_professor]
+domingues = Employee.create name: 'Guilherme de Melo Baptista Domingues', email: 'domingues@iprj.uerj.br', job_positions: [job_position_professor]
+lcustodio = Employee.create name: 'Lis Ingrid Roque Lopes Custodio', email: 'lcustodio@iprj.uerj.br', job_positions: [job_position_professor]
+silvia_dias = Employee.create name: 'Sílvia Cristina Dias Pinto', email: 'silvia.dias@iprj.uerj.br', job_positions: [job_position_professor]
+silvia_victer = Employee.create name: 'Silvia Mara da Costa Campos Victer', email: 'silviavicter@iprj.uerj.br', job_positions: [job_position_professor]
 
-helio = Employee.create name: 'Helio Pedro Amaral Souto', email: 'helio@iprj.uerj.br', ramal: '1051', job_positions: [job_position_professor]
-dmilitao = Employee.create name: 'Damiano da Silva Militão', email: 'dmilitão@iprj.uerj.br', ramal: '1081', job_positions: [job_position_professor]
-gsouza = Employee.create name: 'Grazione de Souza Boy', email: 'gsouza@iprj.uerj.br', ramal: '1051', job_positions: [job_position_professor]
-halves = Employee.create name: 'Hermes Alves Filho', email: 'halves@iprj.uerj.br', ramal: '1071', job_positions: [job_position_professor]
-liviajatoba = Employee.create name: 'Livia Flávia Carletti Jatobá', email: 'liviajatoba@iprj.uerj.br', ramal: '1052', job_positions: [job_position_professor]
-guaraldi = Employee.create name: 'Hilton Guaraldi', email: 'guaraldi@iprj.uerj.br', ramal: '1071', job_positions: [job_position_tecnico]
-ptarco = Employee.create name: 'Paulo de Tarço Honório Jr.', email: 'ptarco@iprj.uerj.br', ramal: '1051', job_positions: [job_position_bolsista]
+helio = Employee.create name: 'Helio Pedro Amaral Souto', email: 'helio@iprj.uerj.br', job_positions: [job_position_professor]
+dmilitao = Employee.create name: 'Damiano da Silva Militão', email: 'dmilitão@iprj.uerj.br', job_positions: [job_position_professor]
+gsouza = Employee.create name: 'Grazione de Souza Boy', email: 'gsouza@iprj.uerj.br', job_positions: [job_position_professor]
+halves = Employee.create name: 'Hermes Alves Filho', email: 'halves@iprj.uerj.br', job_positions: [job_position_professor]
+liviajatoba = Employee.create name: 'Livia Flávia Carletti Jatobá', email: 'liviajatoba@iprj.uerj.br', job_positions: [job_position_professor]
+guaraldi = Employee.create name: 'Hilton Guaraldi', email: 'guaraldi@iprj.uerj.br', job_positions: [job_position_tecnico]
+ptarco = Employee.create name: 'Paulo de Tarço Honório Jr.', email: 'ptarco@iprj.uerj.br', job_positions: [job_position_bolsista]
 
 ###### Alocations (Alocações) #######
 
-Allocation.create employee: ricardob, room: room_direcao_313, allocation_role: alocation_role_diretor
+Allocation.create employee: ricardob, ramal: '3131', room: room_direcao_313, allocation_role: alocation_role_diretor
 
-Allocation.create employee: francisco, room: room_lti_112, allocation_role: alocation_membro
-Allocation.create employee: ursula, room: room_lti_112, allocation_role: alocation_membro
-Allocation.create employee: edson, room: room_lti_112, allocation_role: alocation_membro
+Allocation.create employee: francisco, ramal: '1121', room: room_lti_112, allocation_role: alocation_membro
+Allocation.create employee: ursula, ramal: '1121', room: room_lti_112, allocation_role: alocation_membro
+Allocation.create employee: edson, ramal: '1121', room: room_lti_112, allocation_role: alocation_membro
 
-Allocation.create employee: aanamen, room: room_dmc_225, allocation_role: alocation_membro
-Allocation.create employee: bernardo, room: room_dmc_223, allocation_role: alocation_membro
-Allocation.create employee: edirlei, room: room_dmc_225, allocation_role: alocation_membro
-Allocation.create employee: domingues, room: room_dmc_223, allocation_role: alocation_membro
-Allocation.create employee: lcustodio, room: room_dmc_223, allocation_role: alocation_membro
-Allocation.create employee: silvia_dias, room: room_dmc_225, allocation_role: alocation_membro
-Allocation.create employee: silvia_victer, room: room_dmc_223, allocation_role: alocation_membro
+Allocation.create employee: aanamen, ramal: '2107', room: room_dmc_225, allocation_role: alocation_membro
+Allocation.create employee: bernardo, ramal: '2231', room: room_dmc_223, allocation_role: alocation_membro
+Allocation.create employee: edirlei, ramal: '2106', room: room_dmc_225, allocation_role: alocation_membro
+Allocation.create employee: domingues, ramal: '2231', room: room_dmc_223, allocation_role: alocation_membro
+Allocation.create employee: lcustodio, ramal: '2231', room: room_dmc_223, allocation_role: alocation_membro
+Allocation.create employee: silvia_dias, ramal: '2108', room: room_dmc_225, allocation_role: alocation_membro
+Allocation.create employee: silvia_victer, ramal: '2108', room: room_dmc_223, allocation_role: alocation_membro
 
-Allocation.create employee: helio, room: room_labtran_105, allocation_role: alocation_membro
-Allocation.create employee: dmilitao, room: room_labtran_108, allocation_role: alocation_membro
-Allocation.create employee: gsouza, room: room_labtran_105, allocation_role: alocation_membro
-Allocation.create employee: halves, room: room_labtran_107, allocation_role: alocation_membro
-Allocation.create employee: liviajatoba, room: room_labtran_105, allocation_role: alocation_membro
-Allocation.create employee: ricardob, room: room_labtran_108, allocation_role: alocation_membro
-Allocation.create employee: guaraldi, room: room_labtran_107, allocation_role: alocation_membro
-Allocation.create employee: ptarco, room: room_labtran_105, allocation_role: alocation_membro
+Allocation.create employee: helio, ramal: '1051', room: room_labtran_105, allocation_role: alocation_membro
+Allocation.create employee: dmilitao, ramal: '1081', room: room_labtran_108, allocation_role: alocation_membro
+Allocation.create employee: gsouza, ramal: '1051', room: room_labtran_105, allocation_role: alocation_membro
+Allocation.create employee: halves, ramal: '1071', room: room_labtran_107, allocation_role: alocation_membro
+Allocation.create employee: liviajatoba, ramal: '1052', room: room_labtran_105, allocation_role: alocation_membro
+Allocation.create employee: ricardob, ramal: '1081', room: room_labtran_108, allocation_role: alocation_membro
+Allocation.create employee: guaraldi, ramal: '1071', room: room_labtran_107, allocation_role: alocation_membro
+Allocation.create employee: ptarco, ramal: '1051', room: room_labtran_105, allocation_role: alocation_membro

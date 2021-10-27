@@ -3,7 +3,6 @@ class CreateEmployees < ActiveRecord::Migration[5.2]
     create_table :employees do |t|
       t.string :name
       t.string :email
-      t.string :ramal
       t.text :additional_contact_data
 
       t.timestamps

@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 2021_10_19_190026) do
   end
 
   create_table "allocations", force: :cascade do |t|
+    t.string "ramal"
     t.bigint "employee_id"
     t.bigint "room_id"
     t.bigint "allocation_role_id"
@@ -55,7 +56,6 @@ ActiveRecord::Schema.define(version: 2021_10_19_190026) do
   create_table "employees", force: :cascade do |t|
     t.string "name"
     t.string "email"
-    t.string "ramal"
     t.text "additional_contact_data"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
