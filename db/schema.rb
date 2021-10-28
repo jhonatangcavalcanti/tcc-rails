@@ -22,15 +22,16 @@ ActiveRecord::Schema.define(version: 2021_10_19_190026) do
   end
 
   create_table "allocations", force: :cascade do |t|
-    t.string "ramal"
     t.bigint "employee_id"
     t.bigint "place_id"
     t.bigint "allocation_role_id"
+    t.bigint "ramal_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["allocation_role_id"], name: "index_allocations_on_allocation_role_id"
     t.index ["employee_id"], name: "index_allocations_on_employee_id"
     t.index ["place_id"], name: "index_allocations_on_place_id"
+    t.index ["ramal_id"], name: "index_allocations_on_ramal_id"
   end
 
   create_table "buildings", force: :cascade do |t|
@@ -85,6 +86,12 @@ ActiveRecord::Schema.define(version: 2021_10_19_190026) do
     t.index ["job_position_id"], name: "index_positions_on_job_position_id"
   end
 
+  create_table "ramals", force: :cascade do |t|
+    t.string "number"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "rooms", force: :cascade do |t|
     t.string "number"
     t.bigint "building_id"
@@ -110,6 +117,7 @@ ActiveRecord::Schema.define(version: 2021_10_19_190026) do
   add_foreign_key "allocations", "allocation_roles"
   add_foreign_key "allocations", "employees"
   add_foreign_key "allocations", "places"
+  add_foreign_key "allocations", "ramals"
   add_foreign_key "departments", "department_types"
   add_foreign_key "places", "departments"
   add_foreign_key "places", "rooms"

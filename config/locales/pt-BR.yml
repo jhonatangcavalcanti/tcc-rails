@@ -33,6 +33,8 @@ pt-BR:
       departments: "Setores"
       place: "Local"
       places: "Locais"
+      ramal: "Ramal"
+      ramals: "Ramais"
   activerecord:
     models:
       employee:
@@ -71,6 +73,9 @@ pt-BR:
       place:
         one: "Local"
         other: "Locais"
+      ramal:
+        one: "Ramal"
+        other: "Ramais"
     attributes:
       employee:
         name: "Nome"
