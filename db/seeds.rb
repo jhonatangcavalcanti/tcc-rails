@@ -39,18 +39,31 @@ department_dmc = Department.create name: 'DMC - Departamento de Modelagem Comput
 
 ##### Rooms (Salas) #####
 
-room_direcao_313 = Room.create number: '313', building: building_bloco_1, department: department_direcao
+room_313 = Room.create number: '313', building: building_bloco_1
 
-room_coadm_313 = Room.create number: '313', building: building_bloco_1, department: department_coadm
+room_112 = Room.create number: '112', building: building_bloco_1
 
-room_lti_112 = Room.create number: '112', building: building_bloco_1, department: department_lti
+room_225 = Room.create number: '225', building: building_bloco_1
+room_223 = Room.create number: '223', building: building_bloco_1
 
-room_dmc_225 = Room.create number: '225', building: building_bloco_1, department: department_dmc
-room_dmc_223 = Room.create number: '223', building: building_bloco_1, department: department_dmc
+room_105 = Room.create number: '105', building: building_bloco_1
+room_107 = Room.create number: '107', building: building_bloco_1
+room_108 = Room.create number: '108', building: building_bloco_1
 
-room_labtran_105 = Room.create number: '105', building: building_bloco_1, department: department_labtran
-room_labtran_107 = Room.create number: '107', building: building_bloco_1, department: department_labtran
-room_labtran_108 = Room.create number: '108', building: building_bloco_1, department: department_labtran
+##### Place (Local) #####
+
+place_direcao_313 = Place.create room: room_313, department: department_direcao
+
+place_coadm_313 = Place.create room: room_313, department: department_coadm
+
+place_lti_112 = Place.create room:room_112, department: department_lti
+
+place_dmc_225 = Place.create room:room_225, department: department_dmc
+place_dmc_223 = Place.create room:room_223, department: department_dmc
+
+place_labtran_105 = Place.create room:room_105, department: department_labtran
+place_labtran_107 = Place.create room:room_107, department: department_labtran
+place_labtran_108 = Place.create room:room_108, department: department_labtran
 
 ##### Job Position (Cargo) #####
 
@@ -61,15 +74,15 @@ job_position_bolsista = JobPosition.create name: 'Bolsista'
 job_position_professor = JobPosition.create name: 'Professor'
 # job_position_bibliotecario = JobPosition.create name: 'Bibliotecário'
 
-###### Alocation Role (Função) ######
+###### Allocation Role (Função) ######
 
-alocation_role_diretor = AllocationRole.create name: 'Diretor'
-alocation_role_vice_diretor = AllocationRole.create name: 'Vice Diretor'
-alocation_role_coordenador = AllocationRole.create name: 'Coordenador'
-alocation_role_secretario = AllocationRole.create name: 'Secretario'
+allocation_role_diretor = AllocationRole.create name: 'Diretor'
+allocation_role_vice_diretor = AllocationRole.create name: 'Vice Diretor'
+allocation_role_coordenador = AllocationRole.create name: 'Coordenador'
+allocation_role_secretario = AllocationRole.create name: 'Secretario'
 # AllocationRole.create name: 'Chefe'
 # AllocationRole.create name: 'Gerente'
-alocation_membro = AllocationRole.create name: 'Integrante da Equipe (Membro)'
+allocation_membro = AllocationRole.create name: 'Integrante da Equipe (Membro)'
 
 
 ###### Employees (Servidores) #####
@@ -102,34 +115,34 @@ liviajatoba = Employee.create name: 'Livia Flávia Carletti Jatobá', email: 'li
 guaraldi = Employee.create name: 'Hilton Guaraldi', email: 'guaraldi@iprj.uerj.br', job_positions: [job_position_tecnico]
 ptarco = Employee.create name: 'Paulo de Tarço Honório Jr.', email: 'ptarco@iprj.uerj.br', job_positions: [job_position_bolsista]
 
-###### Alocations (Alocações) #######
+###### Allocations (Alocações) #######
 
-Allocation.create employee: ricardob, ramal: '3131', room: room_direcao_313, allocation_role: alocation_role_diretor
-Allocation.create employee: helio, ramal: '3131', room: room_direcao_313, allocation_role: alocation_role_vice_diretor
-Allocation.create employee: arthur, ramal: '3134', room: room_direcao_313, allocation_role: alocation_role_secretario
-Allocation.create employee: bmenezes, ramal: '3134', room: room_direcao_313, allocation_role: alocation_role_secretario
+Allocation.create employee: ricardob, ramal: '3131', place: place_direcao_313, allocation_role: allocation_role_diretor
+Allocation.create employee: helio, ramal: '3131', place: place_direcao_313, allocation_role: allocation_role_vice_diretor
+Allocation.create employee: arthur, ramal: '3134', place: place_direcao_313, allocation_role: allocation_role_secretario
+Allocation.create employee: bmenezes, ramal: '3134', place: place_direcao_313, allocation_role: allocation_role_secretario
 
-Allocation.create employee: ferreira, ramal: '3111', room: room_coadm_313, allocation_role: alocation_role_coordenador
-Allocation.create employee: andrea, ramal: '3113', room: room_coadm_313, allocation_role: alocation_role_secretario
-Allocation.create employee: daiany, ramal: '3112', room: room_coadm_313, allocation_role: alocation_role_secretario
+Allocation.create employee: ferreira, ramal: '3111', place: place_coadm_313, allocation_role: allocation_role_coordenador
+Allocation.create employee: andrea, ramal: '3113', place: place_coadm_313, allocation_role: allocation_role_secretario
+Allocation.create employee: daiany, ramal: '3112', place: place_coadm_313, allocation_role: allocation_role_secretario
 
-Allocation.create employee: francisco, ramal: '1121', room: room_lti_112, allocation_role: alocation_membro
-Allocation.create employee: ursula, ramal: '1121', room: room_lti_112, allocation_role: alocation_membro
-Allocation.create employee: edson, ramal: '1121', room: room_lti_112, allocation_role: alocation_membro
+Allocation.create employee: francisco, ramal: '1121', place: place_lti_112, allocation_role: allocation_membro
+Allocation.create employee: ursula, ramal: '1121', place: place_lti_112, allocation_role: allocation_membro
+Allocation.create employee: edson, ramal: '1121', place: place_lti_112, allocation_role: allocation_membro
 
-Allocation.create employee: aanamen, ramal: '2107', room: room_dmc_225, allocation_role: alocation_membro
-Allocation.create employee: bernardo, ramal: '2231', room: room_dmc_223, allocation_role: alocation_membro
-Allocation.create employee: edirlei, ramal: '2106', room: room_dmc_225, allocation_role: alocation_membro
-Allocation.create employee: domingues, ramal: '2231', room: room_dmc_223, allocation_role: alocation_membro
-Allocation.create employee: lcustodio, ramal: '2231', room: room_dmc_223, allocation_role: alocation_membro
-Allocation.create employee: silvia_dias, ramal: '2108', room: room_dmc_225, allocation_role: alocation_membro
-Allocation.create employee: silvia_victer, ramal: '2108', room: room_dmc_223, allocation_role: alocation_membro
+Allocation.create employee: aanamen, ramal: '2107', place: place_dmc_225, allocation_role: allocation_membro
+Allocation.create employee: bernardo, ramal: '2231', place: place_dmc_223, allocation_role: allocation_membro
+Allocation.create employee: edirlei, ramal: '2106', place: place_dmc_225, allocation_role: allocation_membro
+Allocation.create employee: domingues, ramal: '2231', place: place_dmc_223, allocation_role: allocation_membro
+Allocation.create employee: lcustodio, ramal: '2231', place: place_dmc_223, allocation_role: allocation_membro
+Allocation.create employee: silvia_dias, ramal: '2108', place: place_dmc_225, allocation_role: allocation_membro
+Allocation.create employee: silvia_victer, ramal: '2108', place: place_dmc_223, allocation_role: allocation_membro
 
-Allocation.create employee: helio, ramal: '1051', room: room_labtran_105, allocation_role: alocation_membro
-Allocation.create employee: dmilitao, ramal: '1081', room: room_labtran_108, allocation_role: alocation_membro
-Allocation.create employee: gsouza, ramal: '1051', room: room_labtran_105, allocation_role: alocation_membro
-Allocation.create employee: halves, ramal: '1071', room: room_labtran_107, allocation_role: alocation_membro
-Allocation.create employee: liviajatoba, ramal: '1052', room: room_labtran_105, allocation_role: alocation_membro
-Allocation.create employee: ricardob, ramal: '1081', room: room_labtran_108, allocation_role: alocation_membro
-Allocation.create employee: guaraldi, ramal: '1071', room: room_labtran_107, allocation_role: alocation_membro
-Allocation.create employee: ptarco, ramal: '1051', room: room_labtran_105, allocation_role: alocation_membro
+Allocation.create employee: helio, ramal: '1051', place: place_labtran_105, allocation_role: allocation_membro
+Allocation.create employee: dmilitao, ramal: '1081', place: place_labtran_108, allocation_role: allocation_membro
+Allocation.create employee: gsouza, ramal: '1051', place: place_labtran_105, allocation_role: allocation_membro
+Allocation.create employee: halves, ramal: '1071', place: place_labtran_107, allocation_role: allocation_membro
+Allocation.create employee: liviajatoba, ramal: '1052', place: place_labtran_105, allocation_role: allocation_membro
+Allocation.create employee: ricardob, ramal: '1081', place: place_labtran_108, allocation_role: allocation_membro
+Allocation.create employee: guaraldi, ramal: '1071', place: place_labtran_107, allocation_role: allocation_membro
+Allocation.create employee: ptarco, ramal: '1051', place: place_labtran_105, allocation_role: allocation_membro

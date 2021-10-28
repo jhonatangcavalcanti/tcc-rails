@@ -24,13 +24,13 @@ ActiveRecord::Schema.define(version: 2021_10_19_190026) do
   create_table "allocations", force: :cascade do |t|
     t.string "ramal"
     t.bigint "employee_id"
-    t.bigint "room_id"
+    t.bigint "place_id"
     t.bigint "allocation_role_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["allocation_role_id"], name: "index_allocations_on_allocation_role_id"
     t.index ["employee_id"], name: "index_allocations_on_employee_id"
-    t.index ["room_id"], name: "index_allocations_on_room_id"
+    t.index ["place_id"], name: "index_allocations_on_place_id"
   end
 
   create_table "buildings", force: :cascade do |t|
@@ -67,6 +67,15 @@ ActiveRecord::Schema.define(version: 2021_10_19_190026) do
     t.datetime "updated_at", null: false
   end
 
+  create_table "places", force: :cascade do |t|
+    t.bigint "room_id"
+    t.bigint "department_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["department_id"], name: "index_places_on_department_id"
+    t.index ["room_id"], name: "index_places_on_room_id"
+  end
+
   create_table "positions", force: :cascade do |t|
     t.bigint "employee_id"
     t.bigint "job_position_id"
@@ -79,11 +88,9 @@ ActiveRecord::Schema.define(version: 2021_10_19_190026) do
   create_table "rooms", force: :cascade do |t|
     t.string "number"
     t.bigint "building_id"
-    t.bigint "department_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["building_id"], name: "index_rooms_on_building_id"
-    t.index ["department_id"], name: "index_rooms_on_department_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -102,10 +109,11 @@ ActiveRecord::Schema.define(version: 2021_10_19_190026) do
 
   add_foreign_key "allocations", "allocation_roles"
   add_foreign_key "allocations", "employees"
-  add_foreign_key "allocations", "rooms"
+  add_foreign_key "allocations", "places"
   add_foreign_key "departments", "department_types"
+  add_foreign_key "places", "departments"
+  add_foreign_key "places", "rooms"
   add_foreign_key "positions", "employees"
   add_foreign_key "positions", "job_positions"
   add_foreign_key "rooms", "buildings"
-  add_foreign_key "rooms", "departments"
 end
