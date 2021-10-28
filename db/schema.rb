@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_19_190026) do
+ActiveRecord::Schema.define(version: 2021_10_28_151644) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "allocation_ramals", force: :cascade do |t|
+    t.bigint "allocation_id"
+    t.bigint "ramal_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["allocation_id"], name: "index_allocation_ramals_on_allocation_id"
+    t.index ["ramal_id"], name: "index_allocation_ramals_on_ramal_id"
+  end
 
   create_table "allocation_roles", force: :cascade do |t|
     t.string "name"
@@ -25,13 +34,11 @@ ActiveRecord::Schema.define(version: 2021_10_19_190026) do
     t.bigint "employee_id"
     t.bigint "place_id"
     t.bigint "allocation_role_id"
-    t.bigint "ramal_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["allocation_role_id"], name: "index_allocations_on_allocation_role_id"
     t.index ["employee_id"], name: "index_allocations_on_employee_id"
     t.index ["place_id"], name: "index_allocations_on_place_id"
-    t.index ["ramal_id"], name: "index_allocations_on_ramal_id"
   end
 
   create_table "buildings", force: :cascade do |t|
@@ -114,10 +121,11 @@ ActiveRecord::Schema.define(version: 2021_10_19_190026) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "allocation_ramals", "allocations"
+  add_foreign_key "allocation_ramals", "ramals"
   add_foreign_key "allocations", "allocation_roles"
   add_foreign_key "allocations", "employees"
   add_foreign_key "allocations", "places"
-  add_foreign_key "allocations", "ramals"
   add_foreign_key "departments", "department_types"
   add_foreign_key "places", "departments"
   add_foreign_key "places", "rooms"
