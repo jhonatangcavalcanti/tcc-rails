@@ -9,6 +9,30 @@ pt-BR:
   attributes:
       created_at: "Criado em"
       updated_at: "Atualizado em"
+      employee: "Servidor"
+      employees: "Servidores"
+      building: "Bloco"
+      buildings: "Blocos"
+      position: "Cargo do Servidor"
+      positions: "Cargos do Servidores"
+      job_position: "Cargo"
+      job_positions: "Cargos"
+      department_type: "Tipo de setor"
+      department_types: "Tipos de setores"
+      room: "Sala"
+      rooms: "Salas"
+      user: Usuário
+      users: Usuários
+      ability: Habilidade
+      abilitys: Habilidades
+      allocation_role: "Função"
+      allocation_roles: "Funções"
+      allocation: "Alocação"
+      allocations: "Alocações"
+      department: "Setor"
+      departments: "Setores"
+      place: "Local"
+      places: "Locais"
   activerecord:
     models:
       employee:
@@ -44,6 +68,9 @@ pt-BR:
       department:
         one: "Setor"
         other: "Setores"
+      place:
+        one: "Local"
+        other: "Locais"
     attributes:
       employee:
         name: "Nome"
