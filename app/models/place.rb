@@ -7,6 +7,6 @@ class Place < ApplicationRecord
   accepts_nested_attributes_for :allocations, allow_destroy: true
 
   def title
-    self.room && self.department ? "#{self.room.title} - #{self.department.name}" : ""
+    self.room && self.department ? "#{self.room.title} | #{self.department.name}" : ""
   end
 end

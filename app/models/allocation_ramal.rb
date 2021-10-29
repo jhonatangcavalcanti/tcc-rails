@@ -3,6 +3,6 @@ class AllocationRamal < ApplicationRecord
   belongs_to :ramal, inverse_of: :allocation_ramals
 
   def title
-    self.allocation && self.ramal ? "#{self.allocation.title} - #{self.ramal.title}" : ""
+    self.allocation && self.ramal ? "#{self.allocation.title} | #{self.ramal.title}" : ""
   end
 end
