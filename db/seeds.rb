@@ -35,6 +35,7 @@ department_coadm = Department.create name: 'COADM - Coordenadoria de Administra�
 department_lti = Department.create name: 'LTI - Laboratório de tecnologia da Informação', department_type: department_type_laboratorio
 department_labtran = Department.create name: 'LABTRAN - Laboratório de Modelagem MultiEscala e Transporte de Partículas', department_type: department_type_laboratorio
 department_labfft = Department.create name: 'Laboratório de Fluídos e Fenômenos de Transporte', department_type: department_type_laboratorio
+department_labcor = Department.create name: 'Laboratório de Corrosão', department_type: department_type_laboratorio
 
 department_dmc = Department.create name: 'DMC - Departamento de Modelagem Computacional', department_type: department_type_departamento
 
@@ -53,6 +54,9 @@ room_108_1 = Room.create number: '108', building: building_bloco_1
 
 room_112_2 = Room.create number: '112', building: building_bloco_2
 
+room_102_2 = Room.create number: '102', building: building_bloco_2
+room_104_2 = Room.create number: '104', building: building_bloco_2
+
 ##### Place (Local) #####
 
 place_direcao_313 = Place.create room: room_313_1, department: department_direcao
@@ -69,6 +73,9 @@ place_labtran_107 = Place.create room:room_107_1, department: department_labtran
 place_labtran_108 = Place.create room:room_108_1, department: department_labtran
 
 place_labfft_112 = Place.create room:room_112_2, department: department_labfft
+
+place_labcor_102 = Place.create room:room_102_2, department: department_labcor
+place_labcor_104 = Place.create room:room_104_2, department: department_labcor
 
 ##### Job Position (Cargo) #####
 
@@ -123,6 +130,11 @@ ptarco = Employee.create name: 'Paulo de Tarço Honório Jr.', email: 'ptarco@ip
 dcamara = Employee.create name: 'Leôncio Diógenes Tavares Câmara', email: 'dcamara@iprj.uerj.br', job_positions: [job_position_professor]
 mcalixto = Employee.create name: 'Mônica Calixto de Andrade', email: 'mcalixto@iprj.uerj.br', job_positions: [job_position_professor]
 
+inbastos = Employee.create name: 'Ivan Napoleão Bastos', email: 'inbastos@iprj.uerj.br', job_positions: [job_position_professor]
+aliaga = Employee.create name: 'Luis Cesar Rodriguez Aliaga', email: 'aliaga@iprj.uerj.br', job_positions: [job_position_professor]
+verona = Employee.create name: 'Verona Biancardi Oliveira', email: 'verona@iprj.uerj.br', job_positions: [job_position_professor]
+ftsilva77 = Employee.create name: 'Fabiano Tavares', email: 'ftsilva77@gmail.com', job_positions: [job_position_bolsista]
+
 ###### Ramal #######
 
 ramal_3131 = Ramal.create number: '3131'
@@ -141,6 +153,9 @@ ramal_1071 = Ramal.create number: '1071'
 ramal_1052 = Ramal.create number: '1052'
 ramal_1126 = Ramal.create number: '1126'
 ramal_1127 = Ramal.create number: '1127'
+ramal_1046 = Ramal.create number: '1046'
+ramal_1047 = Ramal.create number: '1047'
+ramal_1026 = Ramal.create number: '1026'
 
 ###### Allocations (Alocações) #######
 
@@ -176,3 +191,8 @@ Allocation.create employee: ptarco, ramals: [ramal_1051], places: [place_labtran
 
 Allocation.create employee: dcamara, ramals: [ramal_1126, ramal_1127], places: [place_labfft_112], allocation_role: allocation_membro
 Allocation.create employee: mcalixto, ramals: [ramal_1126, ramal_1127], places: [place_labfft_112], allocation_role: allocation_membro
+
+Allocation.create employee: inbastos, ramals: [ramal_1046], places: [place_labcor_102, place_labcor_104], allocation_role: allocation_membro
+Allocation.create employee: aliaga, ramals: [ramal_1047], places: [place_labcor_102, place_labcor_104], allocation_role: allocation_membro
+Allocation.create employee: verona, ramals: [ramal_1046], places: [place_labcor_102, place_labcor_104], allocation_role: allocation_membro
+Allocation.create employee: ftsilva77, ramals: [ramal_1026], places: [place_labcor_102, place_labcor_104], allocation_role: allocation_membro
