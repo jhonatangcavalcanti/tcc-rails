@@ -33,37 +33,42 @@ department_direcao = Department.create name: 'Direção', department_type: depar
 department_coadm = Department.create name: 'COADM - Coordenadoria de Administração', department_type: department_type_coordenacao_funcional
 
 department_lti = Department.create name: 'LTI - Laboratório de tecnologia da Informação', department_type: department_type_laboratorio
-department_labtran = Department.create name: 'LABTRAN - Laboratório de Modelagem MultiEscala e Transporte de Partículas ', department_type: department_type_laboratorio
+department_labtran = Department.create name: 'LABTRAN - Laboratório de Modelagem MultiEscala e Transporte de Partículas', department_type: department_type_laboratorio
+department_labfft = Department.create name: 'Laboratório de Fluídos e Fenômenos de Transporte', department_type: department_type_laboratorio
 
 department_dmc = Department.create name: 'DMC - Departamento de Modelagem Computacional', department_type: department_type_departamento
 
 ##### Rooms (Salas) #####
 
-room_313 = Room.create number: '313', building: building_bloco_1
+room_313_1 = Room.create number: '313', building: building_bloco_1
 
-room_112 = Room.create number: '112', building: building_bloco_1
+room_112_1 = Room.create number: '112', building: building_bloco_1
 
-room_225 = Room.create number: '225', building: building_bloco_1
-room_223 = Room.create number: '223', building: building_bloco_1
+room_225_1 = Room.create number: '225', building: building_bloco_1
+room_223_1 = Room.create number: '223', building: building_bloco_1
 
-room_105 = Room.create number: '105', building: building_bloco_1
-room_107 = Room.create number: '107', building: building_bloco_1
-room_108 = Room.create number: '108', building: building_bloco_1
+room_105_1 = Room.create number: '105', building: building_bloco_1
+room_107_1 = Room.create number: '107', building: building_bloco_1
+room_108_1 = Room.create number: '108', building: building_bloco_1
+
+room_112_2 = Room.create number: '112', building: building_bloco_2
 
 ##### Place (Local) #####
 
-place_direcao_313 = Place.create room: room_313, department: department_direcao
+place_direcao_313 = Place.create room: room_313_1, department: department_direcao
 
-place_coadm_313 = Place.create room: room_313, department: department_coadm
+place_coadm_313 = Place.create room: room_313_1, department: department_coadm
 
-place_lti_112 = Place.create room:room_112, department: department_lti
+place_lti_112 = Place.create room:room_112_1, department: department_lti
 
-place_dmc_225 = Place.create room:room_225, department: department_dmc
-place_dmc_223 = Place.create room:room_223, department: department_dmc
+place_dmc_225 = Place.create room:room_225_1, department: department_dmc
+place_dmc_223 = Place.create room:room_223_1, department: department_dmc
 
-place_labtran_105 = Place.create room:room_105, department: department_labtran
-place_labtran_107 = Place.create room:room_107, department: department_labtran
-place_labtran_108 = Place.create room:room_108, department: department_labtran
+place_labtran_105 = Place.create room:room_105_1, department: department_labtran
+place_labtran_107 = Place.create room:room_107_1, department: department_labtran
+place_labtran_108 = Place.create room:room_108_1, department: department_labtran
+
+place_labfft_112 = Place.create room:room_112_2, department: department_labfft
 
 ##### Job Position (Cargo) #####
 
@@ -115,6 +120,9 @@ liviajatoba = Employee.create name: 'Livia Flávia Carletti Jatobá', email: 'li
 guaraldi = Employee.create name: 'Hilton Guaraldi', email: 'guaraldi@iprj.uerj.br', job_positions: [job_position_tecnico]
 ptarco = Employee.create name: 'Paulo de Tarço Honório Jr.', email: 'ptarco@iprj.uerj.br', job_positions: [job_position_bolsista]
 
+dcamara = Employee.create name: 'Leôncio Diógenes Tavares Câmara', email: 'dcamara@iprj.uerj.br', job_positions: [job_position_professor]
+mcalixto = Employee.create name: 'Mônica Calixto de Andrade', email: 'mcalixto@iprj.uerj.br', job_positions: [job_position_professor]
+
 ###### Ramal #######
 
 ramal_3131 = Ramal.create number: '3131'
@@ -131,6 +139,8 @@ ramal_1051 = Ramal.create number: '1051'
 ramal_1081 = Ramal.create number: '1081'
 ramal_1071 = Ramal.create number: '1071'
 ramal_1052 = Ramal.create number: '1052'
+ramal_1126 = Ramal.create number: '1126'
+ramal_1127 = Ramal.create number: '1127'
 
 ###### Allocations (Alocações) #######
 
@@ -163,3 +173,6 @@ Allocation.create employee: liviajatoba, ramals: [ramal_1052], places: [place_la
 Allocation.create employee: ricardob, ramals: [ramal_1081], places: [place_labtran_108], allocation_role: allocation_membro
 Allocation.create employee: guaraldi, ramals: [ramal_1071], places: [place_labtran_107], allocation_role: allocation_membro
 Allocation.create employee: ptarco, ramals: [ramal_1051], places: [place_labtran_105], allocation_role: allocation_membro
+
+Allocation.create employee: dcamara, ramals: [ramal_1126, ramal_1127], places: [place_labfft_112], allocation_role: allocation_membro
+Allocation.create employee: mcalixto, ramals: [ramal_1126, ramal_1127], places: [place_labfft_112], allocation_role: allocation_membro
