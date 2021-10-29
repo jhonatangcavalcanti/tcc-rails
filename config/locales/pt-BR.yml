@@ -37,6 +37,8 @@ pt-BR:
       ramals: "Ramais"
       allocation_ramal: "Ramal da alocação"
       allocation_ramals: "Ramais das alocações"
+      allocation_place: "Local da alocação"
+      allocation_places: "Locais das alocações"
   activerecord:
     models:
       employee:
@@ -81,6 +83,9 @@ pt-BR:
       allocation_ramal:
         one: "Ramal da alocação"
         other: "Ramais das alocações"
+      allocation_place:
+        one: "Local da alocação"
+        other: "Locais das alocações"
     attributes:
       employee:
         name: "Nome"
