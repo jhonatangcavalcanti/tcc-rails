@@ -14,7 +14,7 @@ pt-BR:
       building: "Bloco"
       buildings: "Blocos"
       position: "Cargo do Servidor"
-      positions: "Cargos do Servidores"
+      positions: "Cargos do Servidor"
       job_position: "Cargo"
       job_positions: "Cargos"
       department_type: "Tipo de setor"
@@ -36,9 +36,9 @@ pt-BR:
       ramal: "Ramal"
       ramals: "Ramais"
       allocation_ramal: "Ramal da alocação"
-      allocation_ramals: "Ramais das alocações"
+      allocation_ramals: "Ramais da alocação"
       allocation_place: "Local da alocação"
-      allocation_places: "Locais das alocações"
+      allocation_places: "Locais da alocação"
   activerecord:
     models:
       employee:
@@ -93,7 +93,6 @@ pt-BR:
         job_positions: "Cargos"
         rooms: "Salas"
         allocations: "Alocações"
-        positions: "Cargos dos Servidores"
       building:
         name: "Nome"
         rooms: "Salas"
@@ -103,7 +102,6 @@ pt-BR:
       job_position:
         name: "Nome"
         employees: "Servidores"
-        positions: "Cargos dos Servidores"
       department_type:
         name: "Nome"
         departments: "Setores"
