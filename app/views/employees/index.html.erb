@@ -1,0 +1,15 @@
+<h1>Servidores</h1>
+
+<%
+=begin%>
+ <%= render '/components/search_form' %>
+<%
+=end%>
+
+<ul>
+  <% @employees.each do |employee| %>
+  <li>
+    <%= link_to employee.name, employee %>
+  </li>
+  <% end %>
+</ul>

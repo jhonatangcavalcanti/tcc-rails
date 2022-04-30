@@ -1,0 +1,23 @@
+<div class="last-updated-list-container">
+  <div class="row">
+    <div class="col s12">
+      <h4>Últimos servidores atualizados:</h4>
+    </div>
+  </div>
+  <div class="container">
+    <% if @last_5_updated_employees.each do |employee| %>
+      <div class="card">
+        <div class="card-content black-text">
+          <a href=<%= "/employees/#{employee.id}" %> class="card-title black-text"><%= employee.name %><i class="material-icons right">keyboard_arrow_right</i></a>
+        </div>
+      </div>
+    <% end.empty? %>
+      <span>Não foi possível carregar os servidores</span>
+    <% end %>
+  </div>
+  <div class="row">
+    <div class="col s12">
+      <a class="right" href=<%= employees_path %>>Mostrar todos</a>
+    </div>
+  </div>
+</div>
