@@ -12,8 +12,9 @@
     <i class="material-icons">email</i> <span><%= @employee.email %></span>
   </div class="collection-item">
 
-  <div class="collection-item valign-wrapper">
-    <p>Dados adicionais: <%= @employee.additional_contact_data %></p>
+  <div class="collection-item">
+    <h6>Dados adicionais:</h6>
+    <p><%= @employee.additional_contact_data || "Nenhum dado adicional cadastrado." %></p>
   </div class="collection-item">
 
   <%= render 'components/allocation_list', allocations: @employee.allocations %>
