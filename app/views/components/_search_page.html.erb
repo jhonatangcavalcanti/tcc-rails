@@ -7,11 +7,7 @@
     </div>
     <div class="container">
         <% if @employees.each do |employee| %>
-          <div class="card">
-            <div class="card-content black-text">
-              <a href=<%= "/employees/#{employee.id}" %> class="card-title black-text"><%= employee.name %><i class="material-icons right">keyboard_arrow_right</i></a>
-            </div>
-          </div>
+          <%= render '/components/employee_card', employee: employee %>
         <% end.empty? %>
           <span>Não foi encontrado nenhum servidor</span>
         <% end %>

@@ -1,15 +1,11 @@
-<h1>Servidores</h1>
+<div class="employees-list-container">
+  <h4>Servidores:</h4>
 
-<%
-=begin%>
- <%= render '/components/search_form' %>
-<%
-=end%>
+  <div class="container">
 
-<ul>
-  <% @employees.each do |employee| %>
-  <li>
-    <%= link_to employee.name, employee %>
-  </li>
-  <% end %>
-</ul>
+    <% @employees.each do |employee| %>
+      <%= render '/components/employee_card', employee: employee %>
+    <% end %>
+
+  </div>
+</div>
