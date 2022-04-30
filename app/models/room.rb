@@ -6,6 +6,6 @@ class Room < ApplicationRecord
   accepts_nested_attributes_for :places, allow_destroy: true
 
   def title
-    "#{self.number} - #{self.building.name}"
+    "#{self.number} | #{self.building.name}"
   end
 end

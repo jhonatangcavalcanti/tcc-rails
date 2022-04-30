@@ -9,4 +9,12 @@ class Place < ApplicationRecord
   def title
     self.room && self.department ? "#{self.room.title} | #{self.department.name}" : ""
   end
+
+  def room_title
+    self.room.title
+  end
+
+  def department_title
+    self.department.title
+  end
 end

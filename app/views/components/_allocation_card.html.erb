@@ -23,11 +23,16 @@
 
   <div class="section">
     <h6>Loca<%= allocation.places.length > 1 ? 'is' : 'l' %>:</h6>
-    <%= if allocation.places.each do |place| %>
-      <p><%= place.title %></p>
-    <% end.empty? %>
-      <p>Nenhum ramal</p>
-    <% end %>
+    <div class="collection">
+      <%= if allocation.places.each do |place| %>
+        <div class="collection-item">
+          <p><b>Departamento:</b> <%= place.department_title %></p>
+          <p><b>Sala:</b> <%= place.room_title %></p>
+        </div>
+      <% end.empty? %>
+        <p>Nenhum Local</p>
+      <% end %>
+    </div>
   </div>
 
 </li>
