@@ -4,13 +4,13 @@
       <h4>Últimos servidores atualizados:</h4>
     </div>
   </div>
-  <div class="container">
-    <% if @last_5_updated_employees.each do |employee| %>
-      <%= render '/components/employee_card', employee: employee %>
-    <% end.empty? %>
-      <span>Não foi possível carregar os servidores</span>
-    <% end %>
-  </div>
+
+  <% if !@last_5_updated_employees.empty? %>
+    <%= render '/components/employee_list', employees: @last_5_updated_employees %>
+  <% else %>
+    <div class="container">Não foi possível carregar os servidores</div>
+  <% end %>
+
   <div class="row">
     <div class="col s12">
       <a class="right" href=<%= employees_path %>>Mostrar todos</a>

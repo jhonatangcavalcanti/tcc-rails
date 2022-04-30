@@ -1,0 +1,7 @@
+<ul class="container collection">
+
+  <% employees.each do |employee| %>
+    <%= render '/components/employee_card', employee: employee %>
+  <% end %>
+
+</ul>

@@ -4,6 +4,10 @@ $secondary-color: #0067a2 !default;
 @import "materialize";
 @import "material_icons";
 
+.collection a.collection-item {
+  padding: 18px 24px;
+  border-bottom: 4px solid #e0e0e0;
+}
 
 .logo-iprj {
   display: flex;

@@ -1,11 +1,10 @@
 <div class="employees-list-container">
   <h4>Servidores:</h4>
 
-  <div class="container">
+  <% if !@employees.empty? %>
+    <%= render '/components/employee_list', employees: @employees %>
+  <% else %>
+    <div class="container">Nenhum servidor cadastrado</div>
+  <% end %>
 
-    <% @employees.each do |employee| %>
-      <%= render '/components/employee_card', employee: employee %>
-    <% end %>
-
-  </div>
 </div>

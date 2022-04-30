@@ -5,12 +5,11 @@
         <h4>Resultado da busca:</h4>
       </div>
     </div>
-    <div class="container">
-        <% if @employees.each do |employee| %>
-          <%= render '/components/employee_card', employee: employee %>
-        <% end.empty? %>
-          <span>Não foi encontrado nenhum servidor</span>
-        <% end %>
-    </div>
+
+    <% if !@employees.empty? %>
+      <%= render '/components/employee_list', employees: @employees %>
+    <% else %>
+      <div class="container">Não foi encontrado nenhum servidor</div>
+    <% end %>
   </div>
 <% end %>
