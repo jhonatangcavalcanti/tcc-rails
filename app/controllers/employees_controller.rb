@@ -4,6 +4,6 @@ class EmployeesController < ApplicationController
   end
 
   def show
-    @employee = Employee.find(params[:id])
+    @employee = Employee.includes(allocations: [:ramals, :places]).find(params[:id])
   end
 end

@@ -1,0 +1,9 @@
+<ul class="collection with-header">
+
+  <li class="collection-header"><h5>Alocações:</h5></li>
+
+  <% allocations.each do |allocation| %>
+    <%= render '/components/allocation_card', allocation: allocation %>
+  <% end %>
+
+</ul>

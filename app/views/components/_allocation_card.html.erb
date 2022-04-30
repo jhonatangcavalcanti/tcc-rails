@@ -1,0 +1,33 @@
+<li class="collection-item">
+<%
+=begin%>
+<a href=<%= "/employees/#{employee.id}" %> class="card-title black-text"><%= employee.name %><i class="material-icons right">keyboard_arrow_right</i></a>
+<%
+=end%>
+
+  <div class="section">
+    <h6>Função:</h6>
+    <p><%= allocation.allocation_role.name %></p>
+  </div>
+  <div class="divider"></div>
+
+  <div class="section">
+    <h6>Rama<%= allocation.ramals.length > 1 ? 'is' : 'l' %>:</h6>
+    <% if allocation.ramals.each do |ramal| %>
+      <p><%= ramal.title %></p>
+    <% end.empty? %>
+      <p>Nenhum ramal</p>
+    <% end %>
+  </div>
+  <div class="divider"></div>
+
+  <div class="section">
+    <h6>Loca<%= allocation.places.length > 1 ? 'is' : 'l' %>:</h6>
+    <%= if allocation.places.each do |place| %>
+      <p><%= place.title %></p>
+    <% end.empty? %>
+      <p>Nenhum ramal</p>
+    <% end %>
+  </div>
+
+</li>

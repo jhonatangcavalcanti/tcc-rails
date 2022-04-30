@@ -20,8 +20,18 @@ $secondary-color: #0067a2 !default;
   }
 }
 
-.search-wrapper, .search-results, .employees-list-container {
+.search-wrapper, .search-results, .employees-list-container, .employee-details-container {
   padding: 12px;
   margin: 15px 0;
   background-color: #E6E6E6;
+}
+
+.collection-item.employee-item {
+  i {
+    margin-right: 4px;
+  }
+}
+
+.section h6 {
+  font-weight: bold;
 }
