@@ -18,7 +18,6 @@ RailsAdmin.config do |config|
 
   config.model Department do
     parent Building
-    weight -1
   end
 
   config.model DepartmentType do
@@ -27,6 +26,7 @@ RailsAdmin.config do |config|
 
   config.model Room do
     parent Building
+    weight -1
   end
 
   config.model AllocationRole do
