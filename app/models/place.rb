@@ -2,6 +2,8 @@ class Place < ApplicationRecord
   belongs_to :room, inverse_of: :places
   belongs_to :department, inverse_of: :places
 
+  # set uniqueness
+
   has_many :allocation_places, inverse_of: :place
   has_many :allocations, through: :allocation_places
   accepts_nested_attributes_for :allocation_places, allow_destroy: true
@@ -11,7 +13,7 @@ class Place < ApplicationRecord
   end
 
   def room_title
-    self.room.title
+    self.room.number
   end
 
   def room_building_title
@@ -24,5 +26,17 @@ class Place < ApplicationRecord
 
   def department_type_title
     self.department.department_type_title
+  end
+
+  rails_admin do
+    show do
+      include_all_fields
+    end
+    configure :allocation_places do
+      visible false
+    end
+    configure :allocations do
+      visible false
+    end
   end
 end

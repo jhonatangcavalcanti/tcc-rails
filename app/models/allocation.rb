@@ -13,4 +13,21 @@ class Allocation < ApplicationRecord
   def title
     self.employee && self.allocation_role ? "#{self.employee.name} | #{self.allocation_role.name}" : ""
   end
+
+  rails_admin do
+    configure :employee do
+      inline_add false
+      inline_edit false
+    end
+    configure :allocation_role do
+      inline_add false
+      inline_edit false
+    end
+    configure :allocation_ramals do
+      visible false
+    end
+    configure :allocation_places do
+      visible false
+    end
+  end
 end
