@@ -1,5 +1,8 @@
 class JobPosition < ApplicationRecord
-  has_many :positions, inverse_of: :job_position
-  has_many :employees, through: :positions
-  accepts_nested_attributes_for :positions, allow_destroy: true
+  # has_many :positions, inverse_of: :job_position
+  # has_many :employees, through: :positions
+  # accepts_nested_attributes_for :positions, allow_destroy: true
+
+  has_many :employees, inverse_of: :job_position
+  accepts_nested_attributes_for :employees, allow_destroy: true
 end

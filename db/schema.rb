@@ -73,8 +73,10 @@ ActiveRecord::Schema.define(version: 2021_10_28_214532) do
     t.string "name"
     t.string "email"
     t.text "additional_contact_data"
+    t.bigint "job_position_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["job_position_id"], name: "index_employees_on_job_position_id"
   end
 
   create_table "job_positions", force: :cascade do |t|
@@ -93,12 +95,8 @@ ActiveRecord::Schema.define(version: 2021_10_28_214532) do
   end
 
   create_table "positions", force: :cascade do |t|
-    t.bigint "employee_id"
-    t.bigint "job_position_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["employee_id"], name: "index_positions_on_employee_id"
-    t.index ["job_position_id"], name: "index_positions_on_job_position_id"
   end
 
   create_table "ramals", force: :cascade do |t|
@@ -136,9 +134,8 @@ ActiveRecord::Schema.define(version: 2021_10_28_214532) do
   add_foreign_key "allocations", "allocation_roles"
   add_foreign_key "allocations", "employees"
   add_foreign_key "departments", "department_types"
+  add_foreign_key "employees", "job_positions"
   add_foreign_key "places", "departments"
   add_foreign_key "places", "rooms"
-  add_foreign_key "positions", "employees"
-  add_foreign_key "positions", "job_positions"
   add_foreign_key "rooms", "buildings"
 end

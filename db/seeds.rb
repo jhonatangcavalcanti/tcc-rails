@@ -99,41 +99,41 @@ allocation_membro = AllocationRole.create name: 'Integrante da Equipe (Membro)'
 
 ###### Employees (Servidores) #####
 
-ricardob = Employee.create name: 'Ricardo Carvalho de Barros', email: 'ricardob@iprj.uerj.br', job_positions: [job_position_professor]
-helio = Employee.create name: 'Helio Pedro Amaral Souto', email: 'helio@iprj.uerj.br', job_positions: [job_position_professor]
-arthur = Employee.create name: 'Arthur Alencar Filarde de Freitas', email: 'arthur@iprj.uerj.br', job_positions: [job_position_tecnico]
-bmenezes = Employee.create name: 'Bárbara Valéria Menezes de Oliveira', email: 'bmenezes@iprj.uerj.br', job_positions: [job_position_tecnico]
+ricardob = Employee.create name: 'Ricardo Carvalho de Barros', email: 'ricardob@iprj.uerj.br', job_position: job_position_professor
+helio = Employee.create name: 'Helio Pedro Amaral Souto', email: 'helio@iprj.uerj.br', job_position: job_position_professor
+arthur = Employee.create name: 'Arthur Alencar Filarde de Freitas', email: 'arthur@iprj.uerj.br', job_position: job_position_tecnico
+bmenezes = Employee.create name: 'Bárbara Valéria Menezes de Oliveira', email: 'bmenezes@iprj.uerj.br', job_position: job_position_tecnico
 
-ferreira = Employee.create name: 'Marcello da Silva Ferreira', email: 'ferreira@iprj.uerj.br', job_positions: [job_position_tecnico]
-andrea = Employee.create name: 'Andréa Teixeira de Medeiros', email: 'andrea@iprj.uerj.br', job_positions: [job_position_tecnico]
-daiany = Employee.create name: 'Daiany da Silva Pereira Pinto', email: 'daiany@iprj.uerj.br', job_positions: [job_position_tecnico]
+ferreira = Employee.create name: 'Marcello da Silva Ferreira', email: 'ferreira@iprj.uerj.br', job_position: job_position_tecnico
+andrea = Employee.create name: 'Andréa Teixeira de Medeiros', email: 'andrea@iprj.uerj.br', job_position: job_position_tecnico
+daiany = Employee.create name: 'Daiany da Silva Pereira Pinto', email: 'daiany@iprj.uerj.br', job_position: job_position_tecnico
 
-francisco = Employee.create name: 'Francisco Duarte Moura Neto', email: 'fmoura@iprj.uerj.br', job_positions: [job_position_professor]
-ursula = Employee.create name: 'Ursula Andrea Barbara Verdugo Rohrer', email: 'ursula@iprj.uerj.br', job_positions: [job_position_professor]
-edson = Employee.create name: 'Edson Mello Lucas', email: 'emlucas@iprj.uerj.br', job_positions: [job_position_tecnico]
+francisco = Employee.create name: 'Francisco Duarte Moura Neto', email: 'fmoura@iprj.uerj.br', job_position: job_position_professor
+ursula = Employee.create name: 'Ursula Andrea Barbara Verdugo Rohrer', email: 'ursula@iprj.uerj.br', job_position: job_position_professor
+edson = Employee.create name: 'Edson Mello Lucas', email: 'emlucas@iprj.uerj.br', job_position: job_position_tecnico
 
-aanamen = Employee.create name: 'Anderson Amendoeira Namen', email: 'aanamen@iprj.uerj.br', job_positions: [job_position_professor]
-bernardo = Employee.create name: 'Bernardo Sotto-Maior Peralva', email: 'bernardo@iprj.uerj.br', job_positions: [job_position_professor]
-edirlei = Employee.create name: 'Edirlei Éverson Soares de Lima', email: 'edirlei@iprj.uerj.br', job_positions: [job_position_professor]
-domingues = Employee.create name: 'Guilherme de Melo Baptista Domingues', email: 'domingues@iprj.uerj.br', job_positions: [job_position_professor]
-lcustodio = Employee.create name: 'Lis Ingrid Roque Lopes Custodio', email: 'lcustodio@iprj.uerj.br', job_positions: [job_position_professor]
-silvia_dias = Employee.create name: 'Sílvia Cristina Dias Pinto', email: 'silvia.dias@iprj.uerj.br', job_positions: [job_position_professor]
-silvia_victer = Employee.create name: 'Silvia Mara da Costa Campos Victer', email: 'silviavicter@iprj.uerj.br', job_positions: [job_position_professor]
+aanamen = Employee.create name: 'Anderson Amendoeira Namen', email: 'aanamen@iprj.uerj.br', job_position: job_position_professor
+bernardo = Employee.create name: 'Bernardo Sotto-Maior Peralva', email: 'bernardo@iprj.uerj.br', job_position: job_position_professor
+edirlei = Employee.create name: 'Edirlei Éverson Soares de Lima', email: 'edirlei@iprj.uerj.br', job_position: job_position_professor
+domingues = Employee.create name: 'Guilherme de Melo Baptista Domingues', email: 'domingues@iprj.uerj.br', job_position: job_position_professor
+lcustodio = Employee.create name: 'Lis Ingrid Roque Lopes Custodio', email: 'lcustodio@iprj.uerj.br', job_position: job_position_professor
+silvia_dias = Employee.create name: 'Sílvia Cristina Dias Pinto', email: 'silvia.dias@iprj.uerj.br', job_position: job_position_professor
+silvia_victer = Employee.create name: 'Silvia Mara da Costa Campos Victer', email: 'silviavicter@iprj.uerj.br', job_position: job_position_professor
 
-dmilitao = Employee.create name: 'Damiano da Silva Militão', email: 'dmilitão@iprj.uerj.br', job_positions: [job_position_professor]
-gsouza = Employee.create name: 'Grazione de Souza Boy', email: 'gsouza@iprj.uerj.br', job_positions: [job_position_professor]
-halves = Employee.create name: 'Hermes Alves Filho', email: 'halves@iprj.uerj.br', job_positions: [job_position_professor]
-liviajatoba = Employee.create name: 'Livia Flávia Carletti Jatobá', email: 'liviajatoba@iprj.uerj.br', job_positions: [job_position_professor]
-guaraldi = Employee.create name: 'Hilton Guaraldi', email: 'guaraldi@iprj.uerj.br', job_positions: [job_position_tecnico]
-ptarco = Employee.create name: 'Paulo de Tarço Honório Jr.', email: 'ptarco@iprj.uerj.br', job_positions: [job_position_bolsista]
+dmilitao = Employee.create name: 'Damiano da Silva Militão', email: 'dmilitão@iprj.uerj.br', job_position: job_position_professor
+gsouza = Employee.create name: 'Grazione de Souza Boy', email: 'gsouza@iprj.uerj.br', job_position: job_position_professor
+halves = Employee.create name: 'Hermes Alves Filho', email: 'halves@iprj.uerj.br', job_position: job_position_professor
+liviajatoba = Employee.create name: 'Livia Flávia Carletti Jatobá', email: 'liviajatoba@iprj.uerj.br', job_position: job_position_professor
+guaraldi = Employee.create name: 'Hilton Guaraldi', email: 'guaraldi@iprj.uerj.br', job_position: job_position_tecnico
+ptarco = Employee.create name: 'Paulo de Tarço Honório Jr.', email: 'ptarco@iprj.uerj.br', job_position: job_position_bolsista
 
-dcamara = Employee.create name: 'Leôncio Diógenes Tavares Câmara', email: 'dcamara@iprj.uerj.br', job_positions: [job_position_professor]
-mcalixto = Employee.create name: 'Mônica Calixto de Andrade', email: 'mcalixto@iprj.uerj.br', job_positions: [job_position_professor]
+dcamara = Employee.create name: 'Leôncio Diógenes Tavares Câmara', email: 'dcamara@iprj.uerj.br', job_position: job_position_professor
+mcalixto = Employee.create name: 'Mônica Calixto de Andrade', email: 'mcalixto@iprj.uerj.br', job_position: job_position_professor
 
-inbastos = Employee.create name: 'Ivan Napoleão Bastos', email: 'inbastos@iprj.uerj.br', job_positions: [job_position_professor]
-aliaga = Employee.create name: 'Luis Cesar Rodriguez Aliaga', email: 'aliaga@iprj.uerj.br', job_positions: [job_position_professor]
-verona = Employee.create name: 'Verona Biancardi Oliveira', email: 'verona@iprj.uerj.br', job_positions: [job_position_professor]
-ftsilva77 = Employee.create name: 'Fabiano Tavares', email: 'ftsilva77@gmail.com', job_positions: [job_position_bolsista]
+inbastos = Employee.create name: 'Ivan Napoleão Bastos', email: 'inbastos@iprj.uerj.br', job_position: job_position_professor
+aliaga = Employee.create name: 'Luis Cesar Rodriguez Aliaga', email: 'aliaga@iprj.uerj.br', job_position: job_position_professor
+verona = Employee.create name: 'Verona Biancardi Oliveira', email: 'verona@iprj.uerj.br', job_position: job_position_professor
+ftsilva77 = Employee.create name: 'Fabiano Tavares', email: 'ftsilva77@gmail.com', job_position: job_position_bolsista
 
 ###### Ramal #######
 
