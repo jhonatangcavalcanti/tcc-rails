@@ -14,7 +14,15 @@ class Place < ApplicationRecord
     self.room.title
   end
 
+  def room_building_title
+    self.room.building_title
+  end
+
   def department_title
     self.department.title
+  end
+
+  def department_type_title
+    self.department.department_type_title
   end
 end
