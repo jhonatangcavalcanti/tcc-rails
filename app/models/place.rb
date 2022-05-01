@@ -4,7 +4,7 @@ class Place < ApplicationRecord
 
   # set uniqueness
 
-  has_many :allocation_places, inverse_of: :place
+  has_many :allocation_places, inverse_of: :place, dependent: :destroy
   has_many :allocations, through: :allocation_places
   accepts_nested_attributes_for :allocation_places, allow_destroy: true
 

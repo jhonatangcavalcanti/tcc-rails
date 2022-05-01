@@ -1,9 +1,9 @@
 class Ramal < ApplicationRecord
-  has_many :allocation_ramals, inverse_of: :ramal
+  has_many :allocation_ramals, inverse_of: :ramal, dependent: :destroy
   has_many :allocations, through: :allocation_ramals
   accepts_nested_attributes_for :allocation_ramals, allow_destroy: true
 
-  validates :number, uniqueness: { case_sensitive: false }
+  validates :number, uniqueness: { case_sensitive: false }, presence: true
 
   def title
     self.number

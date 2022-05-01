@@ -1,5 +1,5 @@
 class JobPosition < ApplicationRecord
-  has_many :employees, inverse_of: :job_position
+  has_many :employees, inverse_of: :job_position, dependent: :nullify
   accepts_nested_attributes_for :employees, allow_destroy: true
 
   rails_admin do

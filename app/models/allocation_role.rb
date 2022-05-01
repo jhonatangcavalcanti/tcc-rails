@@ -1,5 +1,5 @@
 class AllocationRole < ApplicationRecord
-  has_many :allocations, inverse_of: :allocation_role
+  has_many :allocations, inverse_of: :allocation_role, dependent: :nullify
   accepts_nested_attributes_for :allocations, allow_destroy: true
 
   rails_admin do

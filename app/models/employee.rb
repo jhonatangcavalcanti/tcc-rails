@@ -1,7 +1,7 @@
 class Employee < ApplicationRecord
   belongs_to :job_position, inverse_of: :employees
 
-  has_many :allocations, inverse_of: :employee
+  has_many :allocations, inverse_of: :employee, dependent: :destroy
   accepts_nested_attributes_for :allocations, allow_destroy: true
 
   validates :name, :email, presence: true
