@@ -94,11 +94,6 @@ ActiveRecord::Schema.define(version: 2021_10_28_214532) do
     t.index ["room_id"], name: "index_places_on_room_id"
   end
 
-  create_table "positions", force: :cascade do |t|
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
   create_table "ramals", force: :cascade do |t|
     t.string "number"
     t.datetime "created_at", null: false
