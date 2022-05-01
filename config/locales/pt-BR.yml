@@ -105,6 +105,8 @@ pt-BR:
       department_type:
         name: "Nome"
         departments: "Setores"
+      ramal:
+        number: "Número"
       room:
         name: "Nome"
         number: "Número"
