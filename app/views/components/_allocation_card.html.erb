@@ -3,7 +3,7 @@
   <div class="section">
     <h6>Loca<%= allocation.places.length > 1 ? 'is' : 'l' %>:</h6>
     <div class="collection">
-      <%= if allocation.places.each do |place| %>
+      <% if allocation.places.each do |place| %>
         <div class="collection-item">
           <p><b>Sala:</b> <%= place.room_title %></p>
           <p><b>Bloco:</b> <%= place.room_building_title %></p>
