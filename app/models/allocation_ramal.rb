@@ -5,4 +5,8 @@ class AllocationRamal < ApplicationRecord
   def title
     self.allocation && self.ramal ? "#{self.allocation.title} | #{self.ramal.title}" : ""
   end
+
+  rails_admin do
+    visible false
+  end
 end

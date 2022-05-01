@@ -5,4 +5,8 @@ class AllocationPlace < ApplicationRecord
   def title
     self.allocation && self.place ? "#{self.allocation.title} | #{self.place.title}" : ""
   end
+
+  rails_admin do
+    visible false
+  end
 end
